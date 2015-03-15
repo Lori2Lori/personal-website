@@ -26,3 +26,15 @@ gulp.task 'teacup', ->
       do done
     .pipe rename extname: '.html'
     .pipe gulp.dest options.destination
+
+gulp.task 'watch', ->
+  gulp.watch options.sources, ['teacup']
+
+webserver = require 'gulp-webserver',
+
+gulp.task 'serve', ['watch'], ->
+  gulp
+    .src './build/'
+    .pipe webserver
+      livereload: true,
+      open: true
