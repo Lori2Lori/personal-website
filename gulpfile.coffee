@@ -34,7 +34,7 @@ webserver = require 'gulp-webserver',
 
 gulp.task 'serve', ['watch'], ->
   gulp
-    .src './build/'
+    .src options.destination
     .pipe webserver
       livereload: true,
       open: true
