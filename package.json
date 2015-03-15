@@ -1,0 +1,26 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website about programming and design. ==============================================",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lori2Lori/personal-website.git"
+  },
+  "author": "Lori2Lori",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lori2Lori/personal-website/issues"
+  },
+  "homepage": "https://github.com/Lori2Lori/personal-website",
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "gulp": "^3.8.11",
+    "gulp-rename": "^1.2.0",
+    "teacup-view": "^0.2.2",
+    "through2": "^0.6.3"
+  }
+}
