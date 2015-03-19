@@ -4,6 +4,8 @@ Personal website about programming and design.
 How to start hacking on this project
 ------------------------------------
 
+This instruction assumes that you use some Linux system. Setting it up on Mac OS should be similar though.
+
   1.  Clone this repository
 
   2.  Install node.js (or io.js)
