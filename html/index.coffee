@@ -5,8 +5,8 @@ module.exports = new View ->
   @html =>
     @head =>
       @link rel: "stylesheet", href: "bootstrap/dist/css/bootstrap.min.css"
-      @title "Cats, Programming and Design"
+      @title "Programming, Design and Cats"
     @body =>
       @div => # Inside view use fat arrow to keep reference to teacup object
         @h1 "Hello Tadeusz"
-        @p  "It's nice to see you Lori! I love you"
+        @p  "Let's start"
