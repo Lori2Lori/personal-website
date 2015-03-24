@@ -5,4 +5,4 @@ Decision about switching from PC and Linux Ubuntu Gnome to Mac (Os X Yosemite) w
 This is what I've learned:
   1.
 
-  to be continued
+  to be continued..
