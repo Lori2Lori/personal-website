@@ -22,7 +22,7 @@ module.exports = new View ->
             @li class: "media_icon", id: "social-icons", =>
               @a href: "http://twitter.com/#!/lori2lori", =>
                 @img
-                  src: "http://3.bp.blogspot.com/-x7YZ7aKIxM8/UaKErq0FZlI/AAAAAAAADhE/3zNd_IFPT8g/s1600/Twitter.png"
+                  src: "/images/twitter.png"
                   border:"0"
         @div class: "site-name", =>
           @h1 "Hello Tadeusz!"
