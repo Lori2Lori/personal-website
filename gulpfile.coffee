@@ -4,11 +4,13 @@ gulp      = require 'gulp'
 through   = require 'through2'
 rename    = require "gulp-rename"
 notify    = require 'gulp-notify'
+del       = require 'del'
 # defaults  = require './defaults'
 
 options = # defaults 'teacup',
   sources     : 'html/**/*'
   destination : 'build/'
+  assets      : 'assets/**/*'
 
 module.exports = options
 
@@ -36,11 +38,13 @@ gulp.task 'teacup', ->
 
 gulp.task 'assets', ->
   gulp
-    .src 'assets/**/*'
+    .src options.assets
     .pipe gulp.dest options.destination
 
-gulp.task 'watch', ['teacup'], ->
+gulp.task 'watch', ['teacup', 'assets'], ->
   gulp.watch options.sources, ['teacup']
+  gulp.watch options.assets, ['assets']
+
 
 webserver = require 'gulp-webserver',
 
