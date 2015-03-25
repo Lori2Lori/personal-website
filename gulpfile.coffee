@@ -45,6 +45,8 @@ gulp.task 'watch', ['teacup', 'assets'], ->
   gulp.watch options.sources, ['teacup']
   gulp.watch options.assets, ['assets']
 
+gulp.task 'clean', (done) ->
+  del options.destination, done
 
 webserver = require 'gulp-webserver',
 
