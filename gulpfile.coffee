@@ -1,5 +1,7 @@
 # Eats teacup-views and spits html
-
+#TODO: fix when error ocured gulp crash
+#TODO: do notifications
+#TODO: static files
 gulp      = require 'gulp'
 through   = require 'through2'
 rename    = require "gulp-rename"
