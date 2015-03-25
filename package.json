@@ -1,7 +1,7 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
-  "description": "Personal website about programming and design. ==============================================",
+  "description": "Personal website about programming and design.",
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
