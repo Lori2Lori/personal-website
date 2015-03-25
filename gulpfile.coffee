@@ -34,6 +34,11 @@ gulp.task 'teacup', ->
     .pipe rename extname: '.html'
     .pipe gulp.dest options.destination
 
+gulp.task 'assets', ->
+  gulp
+    .src 'assets/**/*'
+    .pipe gulp.dest options.destination
+
 gulp.task 'watch', ['teacup'], ->
   gulp.watch options.sources, ['teacup']
 
