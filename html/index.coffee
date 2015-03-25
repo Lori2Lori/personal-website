@@ -1,4 +1,12 @@
-View = require "teacup-view"
+View    = require "teacup-view"
+marked  = require "marked"
+fs      = require 'fs'
+
+content = fs.readFileSync './content/About-this-page.md', 'utf-8'
+markdown = new View (md) ->
+  @raw marked md
+
+
 
 module.exports = new View ->
   @doctype 5
@@ -26,6 +34,8 @@ module.exports = new View ->
                   border:"0"
         @div class: "site-name", =>
           @h1 "Hello Tadeusz!"
+
+        @div class: 'content', markdown content
 
       #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       @script src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
