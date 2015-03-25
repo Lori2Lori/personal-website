@@ -1,10 +1,9 @@
 # Eats teacup-views and spits html
-#TODO: do notifications
 #TODO: static files
 gulp      = require 'gulp'
 through   = require 'through2'
 rename    = require "gulp-rename"
-
+notify    = require 'gulp-notify'
 # defaults  = require './defaults'
 
 options = # defaults 'teacup',
@@ -25,12 +24,13 @@ gulp.task 'teacup', ->
         html = do view
       catch error
         console.error error
-        # TODO: error handling should be passed to gulp
-        return do done # error
+        return @emit 'error', error
 
       file.contents = new Buffer html
       @push file
       do done
+    .on 'error', notify.onError (error) -> "Error: #{error.message}"
+
     .pipe rename extname: '.html'
     .pipe gulp.dest options.destination
 
