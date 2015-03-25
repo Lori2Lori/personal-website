@@ -4,7 +4,9 @@
   "description": "Personal website about programming and design. ==============================================",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "develop": "gulp serve",
+    "clean": "gulp clean; bower install"
   },
   "repository": {
     "type": "git",
