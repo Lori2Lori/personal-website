@@ -1,5 +1,4 @@
 # Eats teacup-views and spits html
-#TODO: fix when error ocured gulp crash
 #TODO: do notifications
 #TODO: static files
 gulp      = require 'gulp'
@@ -21,8 +20,14 @@ gulp.task 'teacup', ->
       # each file should be a module containing Teacup View instance
       # i.e. a function, that when called returns HTML string
       require.cache[file.path] = null # Clear cache, otherwise watch will always produce same output
-      view = require file.path
-      html = do view
+      try
+        view = require file.path
+        html = do view
+      catch error
+        console.error error
+        # TODO: error handling should be passed to gulp
+        return do done # error
+
       file.contents = new Buffer html
       @push file
       do done
