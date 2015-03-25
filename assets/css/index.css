@@ -1,3 +1,17 @@
 body {
   background-color: pink;
 }
+
+.container {
+  background-color: white;
+  font-family: 'Roboto',
+  sans-serif;
+}
+
+.my-cat-logo {
+  border: 10px;
+}
+
+.footer.sidebar{
+  background-color: red;
+}
