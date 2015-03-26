@@ -25,29 +25,23 @@ module.exports = new View ->
       @script src: "https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"
       @script src: "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
     @body =>
-      @div class: "container", =>
-        @header class: "header", =>
-          @div class: "my-cat-logo", class: "col-md-4", =>
-            @img src: "images/my-cat-logo.jpg"
-          @div class: "little-header", =>
-            @div class: "empty-space"
-            @div class: "search-engine", =>
-              @li "search engine"
-            @div class: "subscribe-button", =>
-              @li "subscribe button",
-            @div class: "social-media-icons", =>
-              @ul  =>
-                @li class: "media_icon", id: "social-icons", =>
-                  @a href: "http://twitter.com/#!/lori2lori", =>
-                    @img
-                      src: "/images/twitter.png"
-                      border:"0"
-              @ul  =>
-                @li class: "media_icon", id: "social-icons", =>
-                  @a href: "https://github.com/Lori2Lori", =>
-                    @img
-                      src: "/images/github-logo-small.png"
-                      border:"0"
+      @div class: "container-fluid", =>
+        @div class: "row header", =>
+          @div class: "row", =>
+            @div class: "my-cat-logo col-md-4", =>  @img src: "images/my-cat-logo.jpg"
+            @div class: " col-md 4", id: "social-media-icons", =>
+              @li class: "media_icon", id: "social-icons", =>
+                @a href: "http://twitter.com/#!/lori2lori", =>
+                  @img
+                    src: "/images/twitter.png"
+                    border:"0"
+              @li class: "media_icon", id: "social-icons", =>
+                @a href: "https://github.com/Lori2Lori", =>
+                  @img
+                    src: "/images/github-logo-small.png"
+                    border:"0"
+            @div class: "search-engine col-md-4", => @li "search engine"
+            @div class: "subscribe-button col-md-4", => @li "subscribe button"
         @div class: "site", =>
           @div class: "about-me", class: "col-md-4", =>
             @li "About me (with picture)"
