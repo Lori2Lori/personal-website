@@ -28,29 +28,33 @@ module.exports = new View ->
       @div class: "container-fluid", =>
         @div class: "row header", =>
           @div class: "row", =>
-            @div class: "my-cat-logo col-md-4", =>  @img src: "images/my-cat-logo.jpg"
-            @div class: " col-md 4", id: "social-media-icons", =>
+            @div class: "col-md-4", =>
+              @img
+                class: "my-cat-logo"
+                src: "images/my-cat-logo.jpg"
+            @div class: "media-icons col-md-8", id: "social-media-icons", style:"text-align: center;", =>
               @li class: "media_icon", id: "social-icons", =>
                 @a href: "http://twitter.com/#!/lori2lori", =>
                   @img
                     src: "/images/twitter.png"
                     border:"0"
-              @li class: "media_icon", id: "social-icons", =>
+              @li class: "media_icon", id: "github-icon", =>
                 @a href: "https://github.com/Lori2Lori", =>
                   @img
+                    class: "github-round"
                     src: "/images/github-logo-small.png"
                     border:"0"
-            @div class: "search-engine col-md-4", => @li "search engine"
-            @div class: "subscribe-button col-md-4", => @li "subscribe button"
-        @div class: "site", =>
-          @div class: "about-me", class: "col-md-4", =>
+            @div class: "search-engine col-md-4", => @li "search: search engine"
+            @div class: "subscribe-button col-md-4", => @li "subscribe: subscribe button"
+
+        @div class: "row site", =>
+          @div class: "about-me col-md-4", =>
             @li "About me (with picture)"
             @li "Some list here"
             @li "Some nice quotes from database chosen randomely"
             @li "RSS feed or other news"
-          @div class: "content",class: "col-md-8", =>
+          @div class: "content col-md-8", =>
             @h1 "Website about programming, design and... cats"
-
             @div class: 'content', markdown content
         @footer class: "footer", =>
           @div class: "footer-sidebar", =>

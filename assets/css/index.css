@@ -7,13 +7,21 @@
 }
 
 .my-cat-logo {
-  border: 10px;
+  margin: 10px;
 }
 
-/*.footer.sidebar{
-  background-color: red;
-}*/
+.github-round {
+  border-radius: 50px;
+}
 
 #social-media-icons li{
   display: inline;
 }
+
+
+
+/*
+TODO: add different color to sidebar
+.footer.sidebar{
+  background-color: red;
+}*/
