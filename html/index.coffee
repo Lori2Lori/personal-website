@@ -13,7 +13,7 @@ module.exports = new View ->
   @html lang: "en", =>
     @head =>
       @meta charset: "utf-8"
-      @meta "http-equiv": "X-UA-Compatible"
+      @meta "http-equiv": "X-UA-Compatible", content:"IE=edge"
       @meta name: "viewport", content: "width=device-width, initial-scale=1"
       #<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
       @link href:'http://fonts.googleapis.com/css?family=Roboto:400,700,900', rel:'stylesheet', type:'text/css'
@@ -32,7 +32,7 @@ module.exports = new View ->
               @img
                 class: "my-cat-logo"
                 src: "images/my-cat-logo.jpg"
-            @div class: "media-icons col-md-8", id: "social-media-icons", style:"text-align: center;", =>
+            @ul class: "media-icons col-md-8", id: "social-media-icons", style:"text-align: center;", =>
               @li class: "media_icon", id: "social-icons", =>
                 @a href: "http://twitter.com/#!/lori2lori", =>
                   @img
@@ -44,23 +44,24 @@ module.exports = new View ->
                     class: "github-round"
                     src: "/images/github-logo-small.png"
                     border:"0"
-            @div class: "search-engine col-md-4", => @li "search: search engine"
-            @div class: "subscribe-button col-md-4", => @li "subscribe: subscribe button"
+            # TODO: @div class: "search-engine col-md-4", "search: search engine"
+            # TODO: @div class: "subscribe-button col-md-4", "subscribe: subscribe button"
 
         @div class: "row site", =>
           @div class: "about-me col-md-4", =>
-            @li "About me (with picture)"
-            @li "Some list here"
-            @li "Some nice quotes from database chosen randomely"
-            @li "RSS feed or other news"
+            @div "About me (with picture)"
+            # TODO:
+            # @li "Some list here"
+            # @li "Some nice quotes from database chosen randomely"
+            # @li "RSS feed or other news"
           @div class: "content col-md-8", =>
             @h1 "Website about programming, design and... cats"
             @div class: 'content', markdown content
         @footer class: "footer", =>
           @div class: "footer-sidebar", =>
             @li "contact"
-            @li "subscribe"
             @li "credits"
+            # TODO: @li "subscribe"
 
 
       #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
