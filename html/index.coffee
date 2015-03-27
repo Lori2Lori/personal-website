@@ -32,18 +32,19 @@ module.exports = new View ->
               @img
                 class: "my-cat-logo"
                 src: "images/my-cat-logo.jpg"
+                alt: "My logo"
             @ul class: "media-icons col-md-8", id: "social-media-icons", style:"text-align: center;", =>
               @li class: "media_icon", id: "social-icons", =>
                 @a href: "http://twitter.com/#!/lori2lori", =>
                   @img
                     src: "/images/twitter.png"
-                    border:"0"
+                    alt: "Twitter logo with link"
               @li class: "media_icon", id: "github-icon", =>
                 @a href: "https://github.com/Lori2Lori", =>
                   @img
                     class: "github-round"
                     src: "/images/github-logo-small.png"
-                    border:"0"
+                    alt: "GitHub logo with link"
             # TODO: @div class: "search-engine col-md-4", "search: search engine"
             # TODO: @div class: "subscribe-button col-md-4", "subscribe: subscribe button"
 
@@ -58,7 +59,7 @@ module.exports = new View ->
             @h1 "Website about programming, design and... cats"
             @div class: 'content', markdown content
         @footer class: "footer", =>
-          @div class: "footer-sidebar", =>
+          @ul class: "footer-sidebar", =>
             @li "contact"
             @li "credits"
             # TODO: @li "subscribe"
