@@ -1,10 +1,11 @@
 # Eats teacup-views and spits html
 #TODO: static files
-gulp      = require 'gulp'
-through   = require 'through2'
-rename    = require "gulp-rename"
-notify    = require 'gulp-notify'
-del       = require 'del'
+gulp       = require 'gulp'
+through    = require 'through2'
+rename     = require "gulp-rename"
+notify     = require 'gulp-notify'
+del        = require 'del'
+html_valid = require 'gulp-w3cjs'
 # defaults  = require './defaults'
 
 options = # defaults 'teacup',
@@ -34,6 +35,9 @@ gulp.task 'teacup', ->
     .on 'error', notify.onError (error) -> "Error: #{error.message}"
 
     .pipe rename extname: '.html'
+    .pipe html_valid()
+    # TODO: waiting for reply on https://github.com/callumacrae/gulp-w3cjs/issues/10
+    #  .on 'error', notify.onError (error) -> "Error: #{error.message}"
     .pipe gulp.dest options.destination
 
 gulp.task 'assets', ->

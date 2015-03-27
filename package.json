@@ -25,6 +25,7 @@
     "gulp": "^3.8.11",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
+    "gulp-w3cjs": "^0.3.0",
     "gulp-webserver": "^0.9.0",
     "marked": "^0.3.3",
     "teacup-view": "^0.2.2",
