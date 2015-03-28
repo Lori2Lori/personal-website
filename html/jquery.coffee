@@ -26,7 +26,13 @@ module.exports = new View ->
       @script src: "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
     @body =>
       @p "This is a jQuery playground"
+      @p "Something"
+
 
       #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       @script src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
       @script src: "bootstrap/dist/js/bootstrap.min.js"
+      @script """
+        paragraphs = $('p')
+        paragraphs.addClass("well")
+      """
