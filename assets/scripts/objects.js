@@ -7,14 +7,14 @@ cat_element = $("<dl></dl>")
   .append($("<dd>Katiusza</dd>"))
   .appendTo($("#cats"))
 
-// TODO: chain below two lines as well :)
-// HINT: use appendTo
-
-
-// div = $("#cats")
-// div.append(cat_element)
-
-
+  // TODO: add another definition list, this time taking values from cat object
+cat_element = $("<dl></dl>")
+  .addClass("dl-horizontal")
+  .append( $("<dt>name</dt>") )
+  var str = $( "dd:first" ).text(cat.name);
+  $( "dd:last" ).html( str );
+  .append($ ("<dd></dd>") )
+  .appendTo($ ("#cats") )
 
 var cat = {
   name  : "Skubi",
@@ -23,7 +23,7 @@ var cat = {
   mood  : "sleepy"
 }
 
-// TODO: add another definition list, this time taking values from cat object
+
 
 // TODO: wrap it into a function that takes cat object and appends definition list to the DOM tree
 
