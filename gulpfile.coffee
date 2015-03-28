@@ -38,6 +38,7 @@ gulp.task 'teacup', ->
     .pipe html_valid()
     # TODO: waiting for reply on https://github.com/callumacrae/gulp-w3cjs/issues/10
     #  .on 'error', notify.onError (error) -> "Error: #{error.message}"
+    # TODO: doesn't work without Internet connection
     .pipe gulp.dest options.destination
 
 gulp.task 'assets', ->
