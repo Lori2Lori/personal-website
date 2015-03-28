@@ -1,8 +1,8 @@
 Ideas for website
 
-* Kot 1
+* jQuery events (buttons!! :)
 
-  To będzie wpis o kocie
+  [Sample js file](/scripts/jquery-events.js)
 
 * Kot 2
 

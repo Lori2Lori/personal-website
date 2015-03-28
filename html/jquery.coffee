@@ -27,12 +27,10 @@ module.exports = new View ->
     @body =>
       @p "This is a jQuery playground"
       @p "Something"
+      @button id:"add-class-button", class:"btn btn-primary", "Add class button"
 
 
       #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       @script src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
-      @script src: "bootstrap/dist/js/bootstrap.min.js"
-      @script """
-        paragraphs = $('p')
-        paragraphs.addClass("well")
-      """
+      @script src: "/bootstrap/dist/js/bootstrap.min.js"
+      @script src: "/scripts/jquery-events.js"
