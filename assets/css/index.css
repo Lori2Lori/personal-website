@@ -3,6 +3,7 @@
 
 body {
 	background: #E6E6F0;
+	font-family: 'Open Sans', sans-serif;
 }
 
 div#top_center{
@@ -57,10 +58,6 @@ div.left_column, div.center_column, div.right_column{
 	color: #4098DF;
 }
 
-.szary {
-	color: #787878;
-}
-
 span.data {
 	color: #000000;
 	font-size: 13px;
@@ -79,7 +76,8 @@ span.data {
 
 #top_center h2 {
 	font-size: 26px;
-	line-height: 36px
+	line-height: 36px;
+	font-weight: 400;
 }
 
 #top_center {
@@ -96,6 +94,7 @@ span.data {
 #white_center h3 {
 	font-size: 32px;
 	line-height: 40px;
+	font-weight: 300;
 }
 
 #text_left {
@@ -114,7 +113,9 @@ span.data {
 	margin-right: 40px;
 }
 
-
+#top_center h2{
+	color: #787878;
+}
 
 h6 {
 	color: #000000;
@@ -129,6 +130,7 @@ p {
 	margin: 0px;
 	padding-bottom: 16px;
 	font-size: 13px;
+	color: #787878;
 }
 a {
 	color: #787878;
@@ -144,25 +146,6 @@ a {
 #heart {
 	margin-left: 20px;
 }
-
-
-
-/*body{
-	background:url(../images/background.jpg);}*/
-
-/*div{
-	background:url(../images/home-icon1.jpg) no-repeat left top;
-	}
-
-div{
-	background:url(../images/home-icon2.jpg) no-repeat left top;
-	}
-
-div{
-	background:url(../images/home-icon3.jpg) no-repeat left top;
-	}
-
-*/
 
 #clear{
 	clear:both;}
