@@ -3,13 +3,33 @@
 
 .niebieski {
 	color: #4098DF;
-	font: 70px;
+}
+
+.szary {
+	color: #787878;
+}
+
+#top_center h1 {
+	font-size: 70px;
 	font-weight: 400;
 	/*wysokość interlinii: 84px;*/
-	width: 84rem;
+	line-height: 84px;
 	margin-bottom: 6px;
 	margin-top: 30px
 }
+
+#top_center h2 {
+	font-size: 26px;
+	line-height: 36px
+}
+
+#top_center {
+  margin: 0;
+  padding: 0;
+  text-align: center; /* !!! */
+}
+
+
 
 /*body{
 	background:url(../images/background.jpg);}*/
@@ -29,4 +49,7 @@ div{
 */
 
 #clear{
+	clear:both;}
+
+#clear2{
 	clear:both;}
