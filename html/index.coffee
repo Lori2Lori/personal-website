@@ -14,7 +14,7 @@ module.exports = new View ->
       @meta charset: "utf-8"
       @meta "http-equiv": "X-UA-Compatible", content:"IE=edge"
       @meta name: "viewport", content: "width=device-width, initial-scale=1"
-      @link rel:"stylesheet", type:"text/css", href:"/assets/css/index.css"
+      @link rel:"stylesheet", href:"/css/index.css"
       @title "My portfolio"
     @body =>
       @div id:"top_center", =>
@@ -47,7 +47,7 @@ module.exports = new View ->
 
         @div id:"lewa_kolumna", =>
           @h3 class:"dark", "Welcome to my site!"
-          @img src:"/assets/home-1.jpg" , alt:"my picture"
+          @img src:"/home-1.jpg" , alt:"my picture"
           @h6 class:"szary", "Lorem ipsum dolor sit amet, consec teer adipiscing. Prsent vestibulum molestie lacuiirhs. Aeneon my."
           @p "Lorem ipsum dolor sit amet, consec tetuer adipiscing. Praesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris. Phasellllus. porta. Fusce suscipit varius mium sociis totdnatibus et magis dis parturient montes, nascetur ridiculus mus. Nulla dui."
 
