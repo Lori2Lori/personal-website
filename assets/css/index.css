@@ -1,8 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
 
-body{
-	background:url(../images/background.jpg);}
+.niebieski {
+	color: #4098DF;
+	font: 70px;
+	font-weight: 400;
+	/*wysokość interlinii: 84px;*/
+	width: 84rem;
+	margin-bottom: 6px;
+	margin-top: 30px
+}
+
+/*body{
+	background:url(../images/background.jpg);}*/
 
 /*div{
 	background:url(../images/home-icon1.jpg) no-repeat left top;
@@ -19,4 +29,4 @@ div{
 */
 
 #clear{
-	clear:both;}				
+	clear:both;}

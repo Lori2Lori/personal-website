@@ -14,8 +14,8 @@ module.exports = new View ->
       @meta charset: "utf-8"
       @meta "http-equiv": "X-UA-Compatible", content:"IE=edge"
       @meta name: "viewport", content: "width=device-width, initial-scale=1"
-      #<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-      @title "Dokument bez tytułu"
+      @link rel:"stylesheet", type:"text/css", href:"/assets/css/index.css"
+      @title "My portfolio"
     @body =>
       @div id:"top_center", =>
         @h1 class:"niebieski", "Hello!"
@@ -47,7 +47,7 @@ module.exports = new View ->
 
         @div id:"lewa_kolumna", =>
           @h3 class:"dark", "Welcome to my site!"
-          @img src:""
+          @img src:"/assets/home-1.jpg" , alt:"my picture"
           @h6 class:"szary", "Lorem ipsum dolor sit amet, consec teer adipiscing. Prsent vestibulum molestie lacuiirhs. Aeneon my."
           @p "Lorem ipsum dolor sit amet, consec tetuer adipiscing. Praesent vestibu lum molestie lacuiirhs. Aenean non ummy hendreriauris. Phasellllus. porta. Fusce suscipit varius mium sociis totdnatibus et magis dis parturient montes, nascetur ridiculus mus. Nulla dui."
 
@@ -67,5 +67,5 @@ module.exports = new View ->
           @h3 class:"dark", "Featured works"
           @h6 class:"szary", "Lorem ipsum dolor sit amet, consec teer adipiscing. Prsent vestibulum molestie lacuiirhs. Aeneon my."
           @p "Lorem ipsum dolor sit amet, consec tetuer adipi scing. Praesent vestibu. lum molestie lacuiirhs. Aenean non ummy hendreriauris. Phasellllus."
-
-        @div id:"clear"
+# TODO: 'clear must be named differently'
+        @div id:"clear2"
