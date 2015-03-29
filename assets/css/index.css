@@ -1,27 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
 
+body{
+	background:url(../images/background.jpg);}
 
-.container-fluid {
-  background-color: pink;
-  font-family: 'Roboto',
-  sans-serif;
-}
+/*div{
+	background:url(../images/home-icon1.jpg) no-repeat left top;
+	}
 
-.my-cat-logo {
-  margin: 10px;
-}
+div{
+	background:url(../images/home-icon2.jpg) no-repeat left top;
+	}
 
-.github-round {
-  border-radius: 50px;
-}
+div{
+	background:url(../images/home-icon3.jpg) no-repeat left top;
+	}
 
-#social-media-icons li{
-  display: inline;
-}
+*/
 
-
-
-/*
-TODO: add different color to sidebar
-.footer.sidebar{
-  background-color: red;
-}*/
+#clear{
+	clear:both;}				
