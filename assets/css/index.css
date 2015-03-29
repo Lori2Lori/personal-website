@@ -132,11 +132,12 @@ p {
 	font-size: 13px;
 	color: #787878;
 }
-a {
+a.more {
 	color: #787878;
 	font-size: 20px;
 	line-height: 18px;
 	padding: 0px
+	font-family: "Cookie", cursive !important;
 }
 
 #heart, #camera, #man {

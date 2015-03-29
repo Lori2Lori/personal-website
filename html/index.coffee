@@ -16,6 +16,7 @@ module.exports = new View ->
       @meta name: "viewport", content: "width=device-width, initial-scale=1"
       @link rel:"stylesheet", href:"/css/index.css", type:"text/css"
       @link href:"http://fonts.googleapis.com/css?family=Open+Sans:700,400,300", rel:"stylesheet", type:"text/css"
+      @link href:"http://fonts.googleapis.com/css?family=Cookie", rel:"stylesheet", type:"text/css"
       @title "My portfolio"
     @body =>
 
