@@ -17,6 +17,7 @@ module.exports = new View ->
       @link rel:"stylesheet", href:"/css/index.css"
       @title "My portfolio"
     @body =>
+
       @div id:"top_center", =>
         @h1 class:"niebieski", "Hello!"
         @h2 class:"szary", "I am a professional cinematographer with years of experience filming everything from feature films to music videos to superbowl commercials."
@@ -24,22 +25,34 @@ module.exports = new View ->
       @div id:"white_center", =>
 
         @div class:"left_column", =>
-          @h3 class:"niebieski", "Advertising"
-          @h6 class:"szary", "Lorem ipsum dolor sit amet, consec tetue."
-          @p "Lorem ipsum dolor sit amet, consec tetuer adipi scing. Praesent vestibu. lum molestie lacuiirhs. Aenean non ummy hendreriauris. Phasellllus."
-          @a href:"", class:"more", "more"
+          @div class:"icon", =>
+            @a id:"heart", =>
+              @img src: "/home-icon1.jpg", alt:"heart icon"
+          @div id:"text_left", =>
+            @h3 class:"niebieski", "Advertising"
+            @h6 class:"szary", "Lorem ipsum dolor sit amet, consec tetue."
+            @p "Lorem ipsum dolor sit amet, consec tetuer adipi scing. Praesent vestibu. lum molestie lacuiirhs. Aenean non ummy hendreriauris. Phasellllus."
+            @a href:"", class:"more", "more"
 
         @div class:"center_column", =>
-          @h3 class:"niebieski", "Web video"
-          @h6 class:"szary", "consec tetuer adipi scing Praesent."
-          @p "Scing. Praesent vestibu. lum molestie lacuiirhs. Aenean non ummy hendreriauris. Phasellllus. porta. Fusce suscipit varius mium sociis totdnat"
-          @a href:"", class:"more", "more"
+          @div class:"icon", =>
+            @a id:"camera", =>
+              @img src: "/home-icon2.jpg", alt:"camera icon"
+          @div id:"text_center", =>
+            @h3 class:"niebieski", "Web video"
+            @h6 class:"szary", "consec tetuer adipi scing Praesent."
+            @p "Scing. Praesent vestibu. lum molestie lacuiirhs. Aenean non ummy hendreriauris. Phasellllus. porta. Fusce suscipit varius mium sociis totdnat"
+            @a href:"", class:"more", "more"
 
         @div class:"right_column", =>
-          @h3 class:"niebieski", "Corporate"
-          @h6 class:"szary", "lum molestie lacuiirhs. Aenean non um."
-          @p "Aenean non ummy hendreriauris. Phasellllus. porta. Fusce suscipit varius mium sociis totdnat. ibuset magis dis parturient montes, nascetur."
-          @a href:"", class:"more", "more"
+          @div class:"icon", =>
+            @a id:"man", =>
+              @img src: "/home-icon3.jpg", alt:"man icon"
+          @div id:"text_right", =>
+            @h3 class:"niebieski", "Corporate"
+            @h6 class:"szary", "lum molestie lacuiirhs. Aenean non um."
+            @p "Aenean non ummy hendreriauris. Phasellllus. porta. Fusce suscipit varius mium sociis totdnat. ibuset magis dis parturient montes, nascetur."
+            @a href:"", class:"more", "more"
 
         @div id:"clear"
 
@@ -53,6 +66,7 @@ module.exports = new View ->
 
         @div id:"srodkowa_kolumna", =>
           @h3 class:"dark", "Events calendar"
+
           @div class:"data_1"
           @span class:"data", "24.09.2012"
           @h6 class:"szary", "Lorem ipsum dolor sit amet, consec teer adipiscing. Prsent vestibulum."
@@ -68,4 +82,4 @@ module.exports = new View ->
           @h6 class:"szary", "Lorem ipsum dolor sit amet, consec teer adipiscing. Prsent vestibulum molestie lacuiirhs. Aeneon my."
           @p "Lorem ipsum dolor sit amet, consec tetuer adipi scing. Praesent vestibu. lum molestie lacuiirhs. Aenean non ummy hendreriauris. Phasellllus."
 # TODO: 'clear must be named differently'
-        @div id:"clear2"
+      @div id:"clear2"
