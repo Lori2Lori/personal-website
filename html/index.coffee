@@ -2,11 +2,10 @@ View    = require "teacup-view"
 marked  = require "marked"
 fs      = require 'fs'
 
-content = fs.readFileSync './content/15.03.17.Starting programming from scratch.md', 'utf-8'
 markdown = new View (md) ->
   @raw marked md
 
-module.exports = new View ->
+module.exports = new View (articles) ->
   @doctype 5
   @html lang: "en", =>
     @head =>
@@ -56,16 +55,7 @@ module.exports = new View ->
           @div class: "content col-md-8", =>
             @h1 "Website about programming, design and... cats"
             # TODO: Loop that will output div for each article
-            articles=[
-              '''
-                #This is an article
-                This is some text
-              '''
-              '''
-                #This is second article
-                This is another text
-              '''
-            ]
+
             for article in articles
               @div class: 'content', markdown article
         @footer class: "footer", =>

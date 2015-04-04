@@ -21,10 +21,20 @@ gulp.task 'teacup', ->
     .pipe through.obj (file, enc, done) ->
       # each file should be a module containing Teacup View instance
       # i.e. a function, that when called returns HTML string
+      articles = [
+        '''
+          #This is an article
+          This is some text
+        '''
+        '''
+          #LAlala
+          This is another text
+        '''
+      ]
       require.cache[file.path] = null # Clear cache, otherwise watch will always produce same output
       try
         view = require file.path
-        html = do view
+        html = view articles
       catch error
         console.error error
         return @emit 'error', error
