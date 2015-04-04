@@ -6,8 +6,6 @@ content = fs.readFileSync './content/15.03.17.Starting programming from scratch.
 markdown = new View (md) ->
   @raw marked md
 
-
-
 module.exports = new View ->
   @doctype 5
   @html lang: "en", =>
@@ -57,7 +55,19 @@ module.exports = new View ->
             # @li "RSS feed or other news"
           @div class: "content col-md-8", =>
             @h1 "Website about programming, design and... cats"
-            @div class: 'content', markdown content
+            # TODO: Loop that will output div for each article
+            articles=[
+              '''
+                #This is an article
+                This is some text
+              '''
+              '''
+                #This is second article
+                This is another text
+              '''
+            ]
+            for article in articles
+              @div class: 'content', markdown article
         @footer class: "footer", =>
           @ul class: "footer-sidebar", =>
             @li "contact"
