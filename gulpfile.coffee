@@ -6,31 +6,34 @@ rename     = require "gulp-rename"
 notify     = require 'gulp-notify'
 del        = require 'del'
 html_valid = require 'gulp-w3cjs'
+fs         = require 'fs'
 # defaults  = require './defaults'
 
 options = # defaults 'teacup',
   sources     : 'html/**/*'
   destination : 'build/'
   assets      : 'assets/**/*'
+  content     : 'content/**/*.md'
 
 module.exports = options
 
-gulp.task 'teacup', ->
+articles = []
+
+gulp.task 'read-articles', ->
+  articles = []
+  gulp
+    .src options.content
+    .pipe through.obj (file, enc, done) ->
+      content = fs.readFileSync file.path, enc
+      articles.push content
+      do done
+
+gulp.task 'teacup', ['read-articles'], ->
   gulp
     .src options.sources, read: no
     .pipe through.obj (file, enc, done) ->
       # each file should be a module containing Teacup View instance
       # i.e. a function, that when called returns HTML string
-      articles = [
-        '''
-          #This is an article
-          This is some text
-        '''
-        '''
-          #LAlala
-          This is another text
-        '''
-      ]
       require.cache[file.path] = null # Clear cache, otherwise watch will always produce same output
       try
         view = require file.path

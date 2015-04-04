@@ -1,11 +1,11 @@
 View    = require "teacup-view"
 marked  = require "marked"
-fs      = require 'fs'
 
 markdown = new View (md) ->
   @raw marked md
 
 module.exports = new View (articles) ->
+
   @doctype 5
   @html lang: "en", =>
     @head =>
@@ -53,8 +53,7 @@ module.exports = new View (articles) ->
             # @li "Some nice quotes from database chosen randomely"
             # @li "RSS feed or other news"
           @div class: "content col-md-8", =>
-            @h1 "Website about programming, design and... cats"
-            # TODO: Loop that will output div for each article
+            @h1 "Website about programming, design and... cats and stars and dogs"
 
             for article in articles
               @div class: 'content', markdown article
