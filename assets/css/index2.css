@@ -1,0 +1,32 @@
+header {
+  text-align: center;
+  background: #ff3333;
+  background-size: cover;
+  color: white;
+  margin: 0;
+}
+
+header a {
+  color: white;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+header ul {
+  padding: 10px;
+  background: black;
+}
+
+header li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+
+#myphoto {
+  max-height: 200px;
+  margin: 40px 0px 0px 0px;
+  border: 10px solid white;
+  border-radius: 20px;
+}
