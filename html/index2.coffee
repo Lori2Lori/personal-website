@@ -1,6 +1,8 @@
 View    = require "teacup-view"
 marked  = require "marked"
 
+marked.setOptions breaks: true
+
 markdown = new View (md) ->
   @raw marked md
 
@@ -22,7 +24,7 @@ module.exports = new View (articles) ->
       # @script src: "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"
     @body =>
       @header =>
-        @img src: "/images/dorota.jpeg", id:'myphoto'
+        @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning Front-End from scratch?'
         @ul =>
           @li =>
@@ -33,7 +35,9 @@ module.exports = new View (articles) ->
             @a href:'/','Home'
 
       for article in articles
-        @article class: 'content', markdown article
+        @article class: 'content', =>
+          markdown article
+          @button 'Like'
 
 
 

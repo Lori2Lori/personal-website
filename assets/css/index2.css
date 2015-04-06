@@ -1,9 +1,14 @@
+
+
+body {
+  margin: 0;
+}
+
 header {
   text-align: center;
   background: #ff3333;
   background-size: cover;
   color: white;
-  margin: 0;
 }
 
 header a {
@@ -16,7 +21,7 @@ h1 {
 
 header ul {
   padding: 10px;
-  background: black;
+  background: #CACAC8;
 }
 
 header li {
@@ -29,4 +34,19 @@ header li {
   margin: 40px 0px 0px 0px;
   border: 10px solid white;
   border-radius: 20px;
+}
+article {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 36px;
+  }
+  li {
+    display: block;
+    padding: 5px;
+  }
 }
