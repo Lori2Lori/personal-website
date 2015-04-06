@@ -59,7 +59,7 @@ gulp.task 'assets', ->
     .pipe gulp.dest options.destination
 
 gulp.task 'watch', ['teacup', 'assets'], ->
-  gulp.watch options.sources, ['teacup']
+  gulp.watch [options.sources, options.content], ['teacup']
   gulp.watch options.assets, ['assets']
 
 gulp.task 'clean', (done) ->
