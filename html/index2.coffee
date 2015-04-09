@@ -25,7 +25,7 @@ module.exports = new View (articles) ->
     @body =>
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
-        @h1 'Learning Front-End from scratch?'
+        @h1 'Learning Front-End from scratch'
         @ul =>
           @li =>
             @a href:'#','About me'
