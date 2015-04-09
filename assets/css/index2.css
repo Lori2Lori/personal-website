@@ -2,13 +2,21 @@
 
 body {
   margin: 0;
+  line-height: 28px;
+  font-size: 18px;
+  text-align: justify;
+  /*background: url("/images/swirl_pattern.png")*/
 }
 
 header {
   text-align: center;
   background: #ff3333;
+  background: -moz-linear-gradient(left, black, #ff3333, yellow);
+  background: linear-gradient(left, black, #ff3333, yellow);
+  background: -webkit-linear-gradient(left, black, #ff3333, yellow);
   background-size: cover;
   color: white;
+  margin: 0;
 }
 
 header a {
@@ -16,12 +24,14 @@ header a {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 50px;
 }
 
 header ul {
   padding: 10px;
-  background: #CACAC8;
+  background: black;
+  opacity: 0.4;
+  /*background: url("/images/triangular_@2X.png");*/
 }
 
 header li {
@@ -44,9 +54,21 @@ article {
 @media (max-width: 500px) {
   h1 {
     font-size: 36px;
+    margin-top: 10px;
   }
   li {
     display: block;
     padding: 5px;
+  }
+  #myphoto {
+    max-height:70px;
+    margin: 10px 0 0 0;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
   }
 }
