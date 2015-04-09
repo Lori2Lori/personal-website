@@ -37,10 +37,16 @@ module.exports = new View (articles) ->
       for article in articles
         @article class: 'content', =>
           markdown article
-          @button 'Like'
+          @button 'read more'
 
-
+    #<!-- jQuery (necessary for jQuery JavaScript plugins) -->
+      @script src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type: "text/javascript"
+      @script src: "https://code.jquery.com/jquery-1.11.2.min.js", =>
+      # TODO: script is not working on page
+        $("button").on "click", ->
+          alert "clicked!"
+          return
 
       #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      # @script src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
+      #@script src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"
       # @script src: "bootstrap/dist/js/bootstrap.min.js"
