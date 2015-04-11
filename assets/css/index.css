@@ -2,8 +2,8 @@
 
 body {
   margin: 0;
-  line-height: 28px;
-  font-size: 18px;
+  line-height: 1.5em;
+  font-size: 1.375em;
   text-align: justify;
   /*background: url("/images/swirl_pattern.png")*/
 }
@@ -19,16 +19,21 @@ header {
   margin: 0;
 }
 
+
+body a {
+  color: green;
+}
 header a {
   color: white;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 2.4em;
+  line-height: normal;
 }
 
 a {
-  font-size: 20px;
+  /*font-size: 20px;*/
   text-decoration: none;
 }
 
@@ -54,14 +59,22 @@ header li {
 article {
   padding: 20px;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 700px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 36px;
     margin-top: 10px;
   }
+  /*h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }*/
+  div {
+    margin: 20px 12px 0 12px;
+  }
+
   li {
     display: block;
     padding: 5px;
@@ -70,11 +83,6 @@ article {
     max-height:70px;
     margin: 10px 0 0 0;
   }
-  h2 {
-    font-size: 20px;
-    margin: 20px 0 30px 0;
-  }
-  div {
-    margin: 20px 12px 0 12px;
-  }
+
+
 }
