@@ -28,7 +28,7 @@ module.exports = new View (articles) ->
         @h1 'Learning Front-End from scratch'
         @ul =>
           @li =>
-            @a href:'#','About me'
+            @a href:'/','About me'
           @li =>
             @a href:'/','Contact'
           @li =>
