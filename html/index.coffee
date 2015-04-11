@@ -37,14 +37,22 @@ module.exports = new View (articles) ->
       for article in articles
         @article class: 'content', =>
           markdown article
+          #TODO use selector css first child to distinct content text from title
           @button 'read more'
 
     #<!-- jQuery (necessary for jQuery JavaScript plugins) -->
       @script src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type: "text/javascript"
       @script src: "https://code.jquery.com/jquery-1.11.2.min.js"
       @coffeescript =>
-        $("button").on "click", ->
-          alert "clicked!"
+        $ ->
+          $('article.content > *').hide()
+          $('article.content >:first-child').show()
+          $('article.content > button').show()
+
+
+          $("button").on "click", (event) ->
+            $(event.target).siblings().show()
+
 
 
       #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
