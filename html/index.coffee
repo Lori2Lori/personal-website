@@ -26,13 +26,13 @@ module.exports = new View (articles) ->
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning Front-End from scratch'
-        @ul =>
-          @li =>
-            @a href:'/','About me'
-          @li =>
-            @a href:'/','Contact'
-          @li =>
-            @a href:'/','Home'
+        @div id: 'about_me', =>
+          @p 'I am a Lawyer who is learning to become a Front-End Developer' 
+        #TODO: in the future here we have menu
+        #   @li =>
+        #     @a href:'/','About me'
+        #   @li =>
+        #     @a href:'/','Home'
 
       for article in articles
         @article class: 'content', =>
@@ -45,13 +45,16 @@ module.exports = new View (articles) ->
       @script src: "https://code.jquery.com/jquery-1.11.2.min.js"
       @coffeescript =>
         $ ->
-          $('article.content > *').hide()
-          $('article.content >:first-child').show()
-          $('article.content > button').show()
+          hide = =>
+            $('article.content > *').hide()
+            $('article.content >:first-child').show()
+            $('article.content > button').show()
 
+          do hide
 
           $("button").on "click", (event) ->
-            $(event.target).siblings().show()
+            do hide
+            $(event.target).siblings().show('slow')
 
 
 
