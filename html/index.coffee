@@ -27,14 +27,14 @@ module.exports = new View (articles) ->
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning Front-End from scratch'
         @div id: 'about_me', =>
-          @p 'I am a Lawyer who is learning to become a Front-End Developer' 
+          @p 'I am a Lawyer who is learning to become a Front-End Developer'
         #TODO: in the future here we have menu
         #   @li =>
         #     @a href:'/','About me'
         #   @li =>
         #     @a href:'/','Home'
 
-      for article in articles
+      for article in articles.reverse()
         @article class: 'content', =>
           markdown article
           #TODO use selector css first child to distinct content text from title
