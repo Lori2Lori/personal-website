@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "gulp test",
+    "build": "gulp build",
     "develop": "gulp serve",
     "clean": "gulp clean; bower install"
   },

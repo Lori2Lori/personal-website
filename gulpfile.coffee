@@ -59,6 +59,8 @@ gulp.task 'assets', ->
     .src options.assets
     .pipe gulp.dest options.destination
 
+gulp.task 'build', ['teacup', 'assets']
+
 gulp.task 'watch', ['teacup', 'assets'], ->
   gulp.watch [options.sources, options.content], ['teacup']
   gulp.watch options.assets, ['assets']
