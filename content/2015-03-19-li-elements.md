@@ -6,6 +6,6 @@ How did I discover it? There is a great tool to debug html (or css or javascript
 
 But there is one huge disadvantage: you have to check it each time manually. Or maybe not?
 
-There is a great programm that can check your code and show you errors in terminal, as soon as you save your file. It's called [gulp](http://gulpjs.com/). It makes programmers life way easier, by automatizing repeating actions.
+There is a great program that can check your code and show you errors in terminal, as soon as you save your file. It's called [gulp](http://gulpjs.com/). It makes programmers life way easier, by automatizing repeating actions.
 
-Gulp runs on javascript and can be customized to meet your needs.
+Gulp runs on javascript and can be customized to meet your needs. 

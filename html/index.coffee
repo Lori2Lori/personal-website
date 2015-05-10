@@ -53,10 +53,22 @@ module.exports = new View (articles) ->
           do hide
 
           $("button").on "click", (event) ->
+            console.log 'button clicked'
+            # debugger
             do hide
-            $(event.target).siblings().show('slow')
+            $(event.target)
+              .siblings()
+              .show 1000
 
+            # TODO: scroll to when show is done
+            scroll = =>
+              # debugger
+              console.log 'show complete'
+              $('html, body').animate({
+                scrollTop: $(this).parent().offset().top
+              }, 500);
 
+            setTimeout scroll, 1000
 
       #<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       #@script src: "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"

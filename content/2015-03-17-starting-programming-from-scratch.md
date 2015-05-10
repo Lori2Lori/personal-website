@@ -26,4 +26,4 @@ But how to install something in Terminal? For Linux I use apt-get install comman
 
 3. Git - version control system.
 
-That would be all for today, it's time to have some rest. Let's finish it next time!
+That would be all for today, it's time to have some rest. I'll write about it another time!
