@@ -30,11 +30,20 @@ git pull
 
 I decided not to install iojs on server and use containers instead
 
+When first use:
+
 ```
 docker run -it -p 8000:8000 -v ~/personal-website:/personal-website iojs bash
 
 cd personal-website/
+```
 
+After first use:
+
+```
+docker run -it --rm -v ~/personal-website:/personal-website iojs bash
+
+cd personal-website/
 ```
 
 Now I am in the container and I can run gulp task that builds my website
