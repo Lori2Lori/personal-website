@@ -1,4 +1,4 @@
-# How to generate html links from text file using regular expression and javascript 
+# How to generate html links from text file using regular expression and javascript
 
 1. Goal, environment and purpose of this program - Explain purpose and method to create in browser interactive window that configures hyperlinks
   - Why I needed this program
