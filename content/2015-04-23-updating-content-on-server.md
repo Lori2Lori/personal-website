@@ -30,26 +30,18 @@ git pull
 
 I decided not to install iojs on server and use containers instead
 
-When first use:
+docker run -itw "/personal-website" --rm -v ~/personal-website:/personal-website iojs npm run build
 
 ```
-docker run -it -p 8000:8000 -v ~/personal-website:/personal-website iojs bash
-
-cd personal-website/
+-w
 ```
 
-After first use:
-
-```
-docker run -it --rm -v ~/personal-website:/personal-website iojs bash
-
-cd personal-website/
-```
-
-Now I am in the container and I can run gulp task that builds my website
+option means that default working directory for running programs within a container is /personal website, not the root directory
 
 ```
 npm run build
 ```
+
+means that npm run gulp task in the container and it builds my website
 
 Changes are now visible on the website!
