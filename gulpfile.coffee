@@ -1,5 +1,5 @@
 # Eats teacup-views and spits html
-#TODO: static files
+
 gulp       = require 'gulp'
 through    = require 'through2'
 rename     = require "gulp-rename"
@@ -7,7 +7,6 @@ notify     = require 'gulp-notify'
 del        = require 'del'
 html_valid = require 'gulp-w3cjs'
 fs         = require 'fs'
-# defaults  = require './defaults'
 
 options = # defaults 'teacup',
   sources     : 'html/**/*'
@@ -28,7 +27,7 @@ gulp.task 'read-articles', ->
       articles.push content
       do done
 
-gulp.task 'teacup', ['read-articles'], ->
+gulp.task 'teacup', ->
   gulp
     .src options.sources, read: no
     .pipe through.obj (file, enc, done) ->
@@ -59,20 +58,30 @@ gulp.task 'assets', ->
     .src options.assets
     .pipe gulp.dest options.destination
 
-gulp.task 'build', ['teacup', 'assets']
+gulp.task 'build', gulp.series [
+  'read-articles'
+  'teacup'
+  'assets'
+]
 
-gulp.task 'watch', ['teacup', 'assets'], ->
-  gulp.watch [options.sources, options.content], ['teacup']
-  gulp.watch options.assets, ['assets']
+gulp.task 'watch', gulp.series [
+  'build'
+  (done) ->
+    gulp.watch [options.sources, options.content], gulp.series ['build']
+    gulp.watch options.assets, gulp.series ['assets']
+]
 
 gulp.task 'clean', (done) ->
   del options.destination, done
 
 webserver = require 'gulp-webserver',
 
-gulp.task 'serve', ['watch'], ->
-  gulp
-    .src options.destination
-    .pipe webserver
-      livereload: true,
-      open: true
+gulp.task 'serve', gulp.parallel [
+  'watch'
+  ->
+    gulp
+      .src options.destination
+      .pipe webserver
+        livereload: true,
+        open: true
+]
