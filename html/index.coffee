@@ -6,7 +6,7 @@ marked.setOptions breaks: true
 markdown = new View (md) ->
   @raw marked md
 
-module.exports = new View (articles) ->
+module.exports = new View (posts) ->
 
   @doctype 5
   @html lang: "en", =>
@@ -34,11 +34,9 @@ module.exports = new View (articles) ->
         #   @li =>
         #     @a href:'/','Home'
 
-      for article in articles.reverse()
+      for post in posts.reverse()
         @article class: 'content', =>
-          markdown article
-          #TODO use selector css first child to distinct content text from title
-          @button 'read more'
+          @a href: post.href, post.title
 
     #<!-- jQuery (necessary for jQuery JavaScript plugins) -->
       @script src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type: "text/javascript"

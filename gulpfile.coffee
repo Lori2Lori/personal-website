@@ -7,6 +7,7 @@ notify     = require 'gulp-notify'
 del        = require 'del'
 html_valid = require 'gulp-w3cjs'
 fs         = require 'fs'
+path       = require 'path'
 
 options = # defaults 'teacup',
   sources     : 'html/**/*'
@@ -16,22 +17,21 @@ options = # defaults 'teacup',
 
 module.exports = options
 
-titles = []
+posts = []
 gulp.task 'posts', ->
   # Create html file for each .md file in content directory.
   template = require './html/post.coffee'
-  titles = []
+  posts = []
 
   gulp
     .src options.content
     .pipe through.obj (file, enc, done) ->
       md = file.contents.toString enc
 
-      # Extract title from markdown string.
-      title = md
+      # Extract title from markdown string and attached it to the file object.
+      file.title = md
         .split('\n')[0]
         .replace /^\#/, ""
-      titles.push title
 
       html = template md
       file.contents = new Buffer html
@@ -39,12 +39,21 @@ gulp.task 'posts', ->
       do done
     .pipe rename extname: '.html'
     .pipe gulp.dest options.destination
+    .pipe through.obj (file, enc, done) ->
+
+      # Add title and file.path to posts array
+      base = path.join __dirname, 'build'
+      href = path.relative base, file.path
+      title = file.title
+      post = {title, href}
+      posts.push post
+      do done
 
 gulp.task 'index', (done) ->
-  # Create index.html file from index.coffee template and titles array.
-  # The titles array is generated in 'posts' task.
+  # Create index.html file from index.coffee template and posts array.
+  # The posts array is generated in 'posts' task.
   template = require './html/index.coffee'
-  html = template titles
+  html = template posts
   fs.writeFile "build/index.html", html, done
 
 gulp.task 'assets', ->
