@@ -35,8 +35,8 @@ gulp.task 'teacup', ->
       # i.e. a function, that when called returns HTML string
       require.cache[file.path] = null # Clear cache, otherwise watch will always produce same output
       try
-        view = require file.path
-        html = view articles
+        template = require file.path
+        html = template articles
       catch error
         console.error error
         return @emit 'error', error
@@ -53,23 +53,36 @@ gulp.task 'teacup', ->
     #  .on 'error', notify.onError (error) -> "Error: #{error.message}"
     .pipe gulp.dest options.destination
 
+titles = []
 gulp.task 'posts', ->
-  # creates html file for each .md file in content directory
-  view = require './html/post.coffee'
-  # html = view article
+  # Create html file for each .md file in content directory.
+  template = require './html/post.coffee'
+  titles = []
 
   gulp
     .src options.content
     .pipe through.obj (file, enc, done) ->
       md = file.contents.toString enc
-      html = view md
+
+      # Extract title from markdown string.
+      title = md
+        .split('\n')[0]
+        .replace /^\#/, ""
+      titles.push title
+
+      html = template md
       file.contents = new Buffer html
       @push file
       do done
     .pipe rename extname: '.html'
     .pipe gulp.dest options.destination
 
-
+gulp.task 'index', (done) ->
+  # Create index.html file from index.coffee template and titles array.
+  # The titles array is generated in 'posts' task.
+  template = require './html/index.coffee'
+  html = template titles
+  fs.writeFile "build/index.html", html, done
 
 gulp.task 'assets', ->
   gulp
@@ -80,6 +93,7 @@ gulp.task 'build', gulp.series [
   # 'read-articles'
   # 'teacup'
   'posts'
+  'index'
   'assets'
 ]
 
