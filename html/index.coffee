@@ -16,7 +16,7 @@ module.exports = new View (articles) ->
       @meta name: "viewport", content: "width=device-width, initial-scale=1"
       #<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
       @link rel: "stylesheet", href: "/css/index.css"
-      @title "Learning Front-End from scratch"
+      @title "Learning programming from scratch"
       #<!-- Bootstrap -->
       # # TODO: Use bootswatch theme https://bootswatch.com/
       # @link href: "bootstrap/dist/css/bootstrap.min.css", rel: "stylesheet"
@@ -25,9 +25,9 @@ module.exports = new View (articles) ->
     @body =>
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
-        @h1 'Learning Front-End from scratch'
+        @h1 'Learning programming from scratch'
         @div id: 'about_me', =>
-          @p 'I am a Lawyer who is learning to become a Front-End Developer'
+          @p 'I am a former Lawyer who is learning to become a Web Developer'
         #TODO: in the future here we have menu
         #   @li =>
         #     @a href:'/','About me'

@@ -16,43 +16,6 @@ options = # defaults 'teacup',
 
 module.exports = options
 
-articles = []
-
-gulp.task 'read-articles', ->
-  articles = []
-  gulp
-    .src options.content
-    .pipe through.obj (file, enc, done) ->
-      content = fs.readFileSync file.path, enc
-      articles.push content
-      do done
-
-gulp.task 'teacup', ->
-  gulp
-    .src options.sources, read: no
-    .pipe through.obj (file, enc, done) ->
-      # each file should be a module containing Teacup View instance
-      # i.e. a function, that when called returns HTML string
-      require.cache[file.path] = null # Clear cache, otherwise watch will always produce same output
-      try
-        template = require file.path
-        html = template articles
-      catch error
-        console.error error
-        return @emit 'error', error
-
-      file.contents = new Buffer html
-      @push file
-      do done
-    .on 'error', notify.onError (error) -> "Error: #{error.message}"
-
-    .pipe rename extname: '.html'
-    # TODO: html validator works too slow or too often shows errors
-    # .pipe html_valid()
-    # TODO: waiting for reply on https://github.com/callumacrae/gulp-w3cjs/issues/10
-    #  .on 'error', notify.onError (error) -> "Error: #{error.message}"
-    .pipe gulp.dest options.destination
-
 titles = []
 gulp.task 'posts', ->
   # Create html file for each .md file in content directory.
@@ -90,8 +53,6 @@ gulp.task 'assets', ->
     .pipe gulp.dest options.destination
 
 gulp.task 'build', gulp.series [
-  # 'read-articles'
-  # 'teacup'
   'posts'
   'index'
   'assets'
