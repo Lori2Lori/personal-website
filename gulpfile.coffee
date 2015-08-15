@@ -53,14 +53,33 @@ gulp.task 'teacup', ->
     #  .on 'error', notify.onError (error) -> "Error: #{error.message}"
     .pipe gulp.dest options.destination
 
+gulp.task 'posts', ->
+  # creates html file for each .md file in content directory
+  view = require './html/post.coffee'
+  # html = view article
+
+  gulp
+    .src options.content
+    .pipe through.obj (file, enc, done) ->
+      md = file.contents.toString enc
+      html = view md
+      file.contents = new Buffer html
+      @push file
+      do done
+    .pipe rename extname: '.html'
+    .pipe gulp.dest options.destination
+
+
+
 gulp.task 'assets', ->
   gulp
     .src options.assets
     .pipe gulp.dest options.destination
 
 gulp.task 'build', gulp.series [
-  'read-articles'
-  'teacup'
+  # 'read-articles'
+  # 'teacup'
+  'posts'
   'assets'
 ]
 
