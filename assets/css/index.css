@@ -20,6 +20,23 @@ header {
   margin: 0;
 }
 
+ul.posts {
+  list-style: none;
+  text-align: center;
+}
+
+ul.posts a {
+  color: black;
+  font-size: 1.5em;
+  display: block;
+  padding: 0.4em;
+  text-decoration: underline;
+  /*transition: background-color 0.5s;*/
+}
+
+/*ul.posts a:hover {
+  background-color: hsl(330, 70%, 90%);
+}*/
 
 body a {
   color: green;
