@@ -11,6 +11,13 @@ module.exports = new View (article) ->
   @doctype 5
   @html lang: "en", =>
     @head =>
+      @meta charset: "utf-8"
+      @meta "http-equiv": "X-UA-Compatible", content:"IE=edge"
+      @meta name: "viewport", content: "width=device-width, initial-scale=1"
+      #<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      @link rel: "stylesheet", href: "/css/index.css"
+      @title "Learning Front-End from scratch"
+    @body =>
       # Google Tag Manager
       @noscript =>
         @iframe
@@ -20,13 +27,6 @@ module.exports = new View (article) ->
           style:"display:none;visibility:hidden"
       @script src:"/scripts/google-tag-manager.js"
       # End Google Tag Manager
-      @meta charset: "utf-8"
-      @meta "http-equiv": "X-UA-Compatible", content:"IE=edge"
-      @meta name: "viewport", content: "width=device-width, initial-scale=1"
-      #<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-      @link rel: "stylesheet", href: "/css/index.css"
-      @title "Learning Front-End from scratch"
-    @body =>
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning Front-End from scratch'
