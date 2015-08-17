@@ -18,15 +18,6 @@ module.exports = new View (article) ->
       @link rel: "stylesheet", href: "/css/index.css"
       @title "Learning Front-End from scratch"
     @body =>
-      # Google Tag Manager
-      @noscript =>
-        @iframe
-          src:"//www.googletagmanager.com/ns.html?id=GTM-TL38JX"
-          height:"0"
-          width:"0"
-          style:"display:none;visibility:hidden"
-      @script src:"/scripts/google-tag-manager.js"
-      # End Google Tag Manager
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning Front-End from scratch'
@@ -44,3 +35,4 @@ module.exports = new View (article) ->
       # jQuery (necessary for jQuery JavaScript plugins)
       @script src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type: "text/javascript"
       @script src: "https://code.jquery.com/jquery-1.11.2.min.js"
+      @script src:"/scripts/analytics.js"

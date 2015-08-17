@@ -42,3 +42,6 @@ module.exports = new View (posts) ->
         for post in posts.reverse()
           @li =>
             @a href: post.href, post.title
+
+      @script src:"/scripts/analytics.js"
+      
