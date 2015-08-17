@@ -11,6 +11,15 @@ module.exports = new View (article) ->
   @doctype 5
   @html lang: "en", =>
     @head =>
+      # Google Tag Manager
+      @noscript =>
+        @iframe
+          src:"//www.googletagmanager.com/ns.html?id=GTM-TL38JX"
+          height:"0"
+          width:"0"
+          style:"display:none;visibility:hidden"
+      @script src:"/scripts/google-tag-manager.js"
+      # End Google Tag Manager
       @meta charset: "utf-8"
       @meta "http-equiv": "X-UA-Compatible", content:"IE=edge"
       @meta name: "viewport", content: "width=device-width, initial-scale=1"
