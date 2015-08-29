@@ -1,6 +1,7 @@
 ---
 title : Starting programming from scratch
 date : 2015-03-17
+description: Where to start learn programming, what tools are necessary or just useful.
 ---
 
 So you want to start programming? Or maybe just make some websites? First you probably tougth 'Ok, I'll install something like javascript, python and it will work just fine'? These were my thoughts - how wrong I was! To start programming, you need whole bunch of programs, so I found out when I decided to become front-end web developer.

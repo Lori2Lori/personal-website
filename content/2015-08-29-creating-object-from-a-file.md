@@ -1,6 +1,7 @@
 ---
 title : Creating object from a text
 date : 2015-08-29
+description : How to manage different kind of data in a single markdown document, using Yaml Front Matter.
 ---
 
 Today I've discovered an amazing package -[Yaml Front Matter](https://www.npmjs.com/package/yaml-front-matter), which can be used to manage different data in text.
@@ -50,7 +51,7 @@ How is it used on this page exactly? As you can see below, I use "title", "date"
       nextWeek: 'dddd',
       lastDay: '[Yesterday]',
       lastWeek: '[Last] dddd'
-      sameElse : "D-MM-YYYY"
+      sameElse : "MMMM Do YYYY"
 
   markdown post.__content
 ```
