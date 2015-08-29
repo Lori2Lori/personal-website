@@ -30,8 +30,6 @@ module.exports = new View (post) ->
           @li =>
             @a href:'/','HOME'
 
-
-
       @article class: 'content', =>
         @h1 post.title
         if post.date? then @h6 id: 'date', =>
@@ -47,7 +45,11 @@ module.exports = new View (post) ->
 
         markdown post.__content
 
+    @div id: 'disqus_thread', =>
+      @script src: '/scripts/disqus.js', type: 'text/javascript'
+
       # jQuery (necessary for jQuery JavaScript plugins)
       @script src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type: "text/javascript"
       @script src: "https://code.jquery.com/jquery-1.11.2.min.js"
       @script src:"/scripts/analytics.js"
+      @script src: '/scripts/disqus2.js', type: 'text/javascript'

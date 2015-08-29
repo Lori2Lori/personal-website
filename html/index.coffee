@@ -40,6 +40,10 @@ module.exports = new View (posts) ->
         for post in posts.reverse()
           @li =>
             @a href: post.href, post.title
+
+      # @div id: 'disqus_thread'
+      #   @script src: '/scripts/disqus.js', type: 'text/javascript'
+
       #TODO: create a footer
 
       @script src:"/scripts/analytics.js"
