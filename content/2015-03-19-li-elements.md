@@ -3,8 +3,6 @@ title : Contemptious html lists and debugging
 date : 2015-03-19
 ---
 
-#Contemptious html lists and debugging
-
 Today I've discovered that `<li>` elements in list have to be in `<ul>`, `<ol>` or `<menu>` container. It can't be inside `<div>` element. Why? It remains a mystery to me (for now).
 
 How did I discover it? There is a great tool to debug html (or css or javascript or other language). You can just put code into certain website (I used [W3C](http://validator.w3.org/) and voila! Errors and warnings are on your plate. It's so wonderful tool that I was shocked hearing that many people doesn't use it.

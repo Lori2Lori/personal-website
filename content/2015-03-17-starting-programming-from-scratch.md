@@ -3,9 +3,6 @@ title : Starting programming from scratch
 date : 2015-03-17
 ---
 
-#Starting programming from scratch
-
-
 So you want to start programming? Or maybe just make some websites? First you probably tougth 'Ok, I'll install something like javascript, python and it will work just fine'? These were my thoughts - how wrong I was! To start programming, you need whole bunch of programs, so I found out when I decided to become front-end web developer.
 At the beggining, you need whole package of programs - but guess what ? They are all in different places and to install one of them you need another one... and so on.
 Now I'm here - installing the same programs 2nd time this week, because of serious computer crash. And I thought this is the best subject for the first post on my website.

@@ -44,4 +44,3 @@ module.exports = new View (posts) ->
             @a href: post.href, post.title
 
       @script src:"/scripts/analytics.js"
-      

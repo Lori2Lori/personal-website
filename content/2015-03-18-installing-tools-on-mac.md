@@ -3,8 +3,6 @@ title : Installing tools on Mac
 date : 2015-03-18
 ---
 
-#Installing tools on Mac
-
 I didn't even try to program on Windows. After just starting using on-line courses like:
 
  [Codecademy](http://www.codecademy.com/coreSurfer58365)

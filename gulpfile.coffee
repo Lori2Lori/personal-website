@@ -21,7 +21,11 @@ module.exports = options
 posts = []
 gulp.task 'posts', ->
   # Create html file for each .md file in content directory.
-  template = require './html/post.coffee'
+  # Clear require cache - otherwise changes to template won't be reflected
+  tpl_path = path.resolve './html/post.coffee'
+  require.cache[tpl_path] = null
+  template = require tpl_path
+
   posts = []
 
   gulp
@@ -32,7 +36,7 @@ gulp.task 'posts', ->
       post = matter.loadFront md
       file.title = post.title
 
-      html = template post.__content
+      html = template post
       file.contents = new Buffer html
       @push file
       do done
@@ -51,7 +55,10 @@ gulp.task 'posts', ->
 gulp.task 'index', (done) ->
   # Create index.html file from index.coffee template and posts array.
   # The posts array is generated in 'posts' task.
-  template = require './html/index.coffee'
+
+  tpl_path = path.resolve './html/index.coffee'
+  require.cache[tpl_path] = null
+  template = require tpl_path
   html = template posts
   fs.writeFile "build/index.html", html, done
 

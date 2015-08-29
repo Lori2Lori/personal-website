@@ -3,8 +3,6 @@ title : Updating content on server
 date : 2015-04-23
 ---
 
-#Updating content on server
-
 Finally, I've deployed my first website on my own [VPS](http://en.wikipedia.org/wiki/Virtual_private_server)! I use [Digital Ocean](https://www.digitalocean.com/?refcode=629046ed2b31) to host it and following tools to deploy and update:
 
 * git & GitHub

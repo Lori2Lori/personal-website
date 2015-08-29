@@ -1,12 +1,13 @@
 View    = require "teacup-view"
 marked  = require "marked"
+moment  = require 'moment'
 
 marked.setOptions breaks: true
 
 markdown = new View (md) ->
   @raw marked md
 
-module.exports = new View (article) ->
+module.exports = new View (post) ->
 
   @doctype 5
   @html lang: "en", =>
@@ -29,8 +30,22 @@ module.exports = new View (article) ->
         #   @li =>
         #     @a href:'/','Home'
 
+
+
       @article class: 'content', =>
-        markdown article
+        @h1 post.title
+        if post.date? then @h6 =>
+          date = moment post.date
+          @span 'Published: '
+          @time datetime: date.format(), date.calendar null,
+            sameDay: '[Today]',
+            nextDay: '[Tomorrow]',
+            nextWeek: 'dddd',
+            lastDay: '[Yesterday]',
+            lastWeek: '[Last] dddd'
+            sameElse : "D-MM-YYYY"
+
+        markdown post.__content
 
       # jQuery (necessary for jQuery JavaScript plugins)
       @script src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type: "text/javascript"
