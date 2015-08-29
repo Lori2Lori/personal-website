@@ -47,6 +47,8 @@ module.exports = new View (post) ->
 
     @div id: 'disqus_thread', =>
       @script src: '/scripts/disqus.js', type: 'text/javascript'
+    @div id: 'copyright', =>
+      @text "© Dorota Cieślińska 2015"
 
       # jQuery (necessary for jQuery JavaScript plugins)
       @script src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type: "text/javascript"
