@@ -8,6 +8,7 @@ del        = require 'del'
 html_valid = require 'gulp-w3cjs'
 fs         = require 'fs'
 path       = require 'path'
+matter     = require 'yaml-front-matter'
 
 options = # defaults 'teacup',
   sources     : 'html/**/*'
@@ -28,12 +29,10 @@ gulp.task 'posts', ->
     .pipe through.obj (file, enc, done) ->
       md = file.contents.toString enc
 
-      # Extract title from markdown string and attached it to the file object.
-      file.title = md
-        .split('\n')[0]
-        .replace /^\#/, ""
+      post = matter.loadFront md
+      file.title = post.title
 
-      html = template md
+      html = template post.__content
       file.contents = new Buffer html
       @push file
       do done

@@ -1,3 +1,8 @@
+---
+title : Contemptious html lists and debugging
+date : 2015-03-19
+---
+
 #Contemptious html lists and debugging
 
 Today I've discovered that `<li>` elements in list have to be in `<ul>`, `<ol>` or `<menu>` container. It can't be inside `<div>` element. Why? It remains a mystery to me (for now).
@@ -8,4 +13,4 @@ But there is one huge disadvantage: you have to check it each time manually. Or 
 
 There is a great program that can check your code and show you errors in terminal, as soon as you save your file. It's called [gulp](http://gulpjs.com/). It makes programmers life way easier, by automatizing repeating actions.
 
-Gulp runs on javascript and can be customized to meet your needs. 
+Gulp runs on javascript and can be customized to meet your needs.

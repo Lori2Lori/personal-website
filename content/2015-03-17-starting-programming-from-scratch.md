@@ -1,3 +1,8 @@
+---
+title : Starting programming from scratch
+date : 2015-03-17
+---
+
 #Starting programming from scratch
 
 
