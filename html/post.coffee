@@ -20,7 +20,8 @@ module.exports = new View (post) ->
       @title "Learning programming from scratch"
     @body =>
       @header =>
-        @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo', href: '/'
+        @a href: '/', =>
+          @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning programming from scratch'
         @div id: 'about_me', =>
           # @p 'I am a Lawyer who is learning to become a Front-End Developer'
