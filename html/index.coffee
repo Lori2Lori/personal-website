@@ -34,11 +34,12 @@ module.exports = new View (posts) ->
         @div id: 'about_me', =>
           # @p 'I am a Lawyer who is learning to become a Front-End Developer'
           @li =>
-            @a href:'http://lori2lori.rocks/000-about-this-page.html','About this page'
+            @a href:'/000-about-this-page.html','ABOUT THIS PAGE'
 
       @ul class: 'posts', =>
         for post in posts.reverse()
           @li =>
             @a href: post.href, post.title
+      #TODO: create a footer
 
       @script src:"/scripts/analytics.js"

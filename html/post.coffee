@@ -17,23 +17,23 @@ module.exports = new View (post) ->
       @meta name: "viewport", content: "width=device-width, initial-scale=1"
       #<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
       @link rel: "stylesheet", href: "/css/index.css"
-      @title "Learning Front-End from scratch"
+      @title "Learning programming from scratch"
     @body =>
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
-        @h1 'Learning Front-End from scratch'
+        @h1 'Learning programming from scratch'
         @div id: 'about_me', =>
           # @p 'I am a Lawyer who is learning to become a Front-End Developer'
           @li =>
-            @a href:'http://lori2lori.rocks/000-about-this-page.html','About this page'
+            @a href:'/000-about-this-page.html','ABOUT THIS PAGE'
           @li =>
-            @a href:'http://lori2lori.rocks/','Home'
+            @a href:'/','HOME'
 
 
 
       @article class: 'content', =>
         @h1 post.title
-        if post.date? then @h6 =>
+        if post.date? then @h6 id: 'date', =>
           date = moment post.date
           @span 'Published: '
           @time datetime: date.format(), date.calendar null,
@@ -42,7 +42,7 @@ module.exports = new View (post) ->
             nextWeek: 'dddd',
             lastDay: '[Yesterday]',
             lastWeek: '[Last] dddd'
-            sameElse : "D-MM-YYYY"
+            sameElse : "MMMM Do YYYY"
 
         markdown post.__content
 
