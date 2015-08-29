@@ -22,19 +22,28 @@ Today I've discovered amazing package - [Yaml Front Matter]
 Thanks to this package it is easy to create an object for the later use:
 
 ```
-{ title: 'Creating object using markdown file',
+{
+  title: 'Creating object using markdown file',
   date: '2015-08-29',
   __content: 'Today I've discovered amazing package - [Yaml Front Matter]
-   (https://www.npmjs.com/package/yaml-front-matter).' }
+   (https://www.npmjs.com/package/yaml-front-matter).'
+}
 ```
 
 It is also extremely easy to insert more details to the document:
 
 ```
-  contact: { email: 'email@domain.com', address: 'some location' },
-  pets: [ 'cat', 'dog', 'bat' ],
-  match: /pattern/gim,
-  run: [Function],
+contact: {
+  email: 'email@domain.com',
+  address: 'some location'
+},
+pets: [
+  'cat',
+  'dog',
+  'bat'
+],
+match: /pattern/gim,
+run: [Function],
 ```
 
 How is it used on this page exactly? As you can see below, I use "title", "date" and "__content" to create my posts with a little help of coffeescript.
