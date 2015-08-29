@@ -23,12 +23,11 @@ module.exports = new View (post) ->
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning Front-End from scratch'
         @div id: 'about_me', =>
-          @p 'I am a Lawyer who is learning to become a Front-End Developer'
-        #TODO: in the future here we have menu
-        #   @li =>
-        #     @a href:'/','About me'
-        #   @li =>
-        #     @a href:'/','Home'
+          # @p 'I am a Lawyer who is learning to become a Front-End Developer'
+          @li =>
+            @a href:'http://lori2lori.rocks/000-about-this-page.html','About this page'
+          @li =>
+            @a href:'http://lori2lori.rocks/','Home'
 
 
 

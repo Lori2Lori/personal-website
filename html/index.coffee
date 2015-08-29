@@ -32,12 +32,10 @@ module.exports = new View (posts) ->
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning programming from scratch'
         @div id: 'about_me', =>
-          @p 'I am a former Lawyer who is learning to become a Web Developer'
-        #TODO: in the future here we have menu
-        #   @li =>
-        #     @a href:'/','About me'
-        #   @li =>
-        #     @a href:'/','Home'
+          # @p 'I am a Lawyer who is learning to become a Front-End Developer'
+          @li =>
+            @a href:'http://lori2lori.rocks/000-about-this-page.html','About this page'
+
       @ul class: 'posts', =>
         for post in posts.reverse()
           @li =>

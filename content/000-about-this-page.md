@@ -2,7 +2,9 @@
 title : About this webpage
 ---
 
-On this website I'd like to share my experience with learning programming, especially web development and design. Currently I'm a lawyer who wants to become front-end developer. I'm learning Graphic Design at school and programming from the internet, free courses and from my friends.
+On this website I'd like to share my experience with learning programming, especially web development and design.
+
+As I've started to build this website I was a lawyer with several years of professional experience and dream to become a web developer. I've started to learn graphic design and programming and soon got a job including software engineering in a translation company.
 
 I have ambitious goal to make this website totally from scratch, so I'm not using here any pre-build CMS. I will be experimenting with better and worse features.
 
