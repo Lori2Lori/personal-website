@@ -1,153 +1,58 @@
-@import url("https://fonts.googleapis.com/css?family=Lustria|Lato:400,300,700&subset=latin,latin-ext");
+@import 'header'
+@import 'typography'
 
-body {
-  font-family: 'Lato', sans-serif;
-  margin: 0;
-  line-height: 1.5em;
-  font-size: 1.375em;
-  text-align: justify;
-  color: hsla(0, 0%, 15%, 1.0);
-  /*background: url("/images/swirl_pattern.png")*/
-}
+body
+  margin: 0
+  line-height: 1.5em
+  text-align: justify
+  color: hsla(0, 0%, 15%, 1.0)
 
-header {
-  text-align: center;
-  background: #ff3333;
-  background: -moz-linear-gradient(135deg, black ,#ff3333, yellow, #ff3333, black);
-  background: linear-gradient(135deg, black ,#ff3333, yellow, #ff3333, black);
-  background: -webkit-linear-gradient(135deg, black ,#ff3333, yellow, #ff3333, black);
-  background-size: cover;
-  color: white;
-  margin: 0;
-}
+.posts
+  list-style: none
+  text-align: center
+  a
+    color: black
+    font-family: 'Lustria', serif
+    font-size: 1.5em
+    display: block
+    padding: 0.4em
+    text-decoration: underline
 
-ul.posts {
-  list-style: none;
-  text-align: center;
-}
+.content
+  a
+    color: black
+    transition: color 0.3s
 
-.posts {
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-}
+    &:visited
+      color: hsl(240, 10%, 55%)
 
-ul.posts a {
-  color: black;
-  font-family: 'Lustria', serif;
-  font-size: 1.5em;
-  display: block;
-  padding: 0.4em;
-  text-decoration: underline;
-  /*transition: background-color 0.5s;*/
-}
+    &:hover
+      color: hsl(13, 100%, 52%)
 
-/*ul.posts a:hover {
-  background-color: hsl(330, 70%, 90%);
-}*/
+#date
+  border-top: 1px solid rgba(51, 51, 51, 0.1)
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1)
+  font-weight: 300
 
-header a {
-  color: white;
-  text-decoration: none;
-}
+article
+  padding: 20px
+  margin: 0 auto
+  max-width: 700px
 
+pre
+  overflow: auto
+  background: #F9F9FA none repeat scroll 0% 0%
+  border: 1px solid rgba(51, 51, 51, 0.1)
+  padding: 0 10px
 
-h1 {
-  font-size: 2.4em;
-  line-height: normal;
-  font-weight: 600;
-  font-family: 'Lustria', serif;
-  color: red
-}
+#disqus_thread
+  max-width: 700px
+  margin: 0 auto
 
-.content a {
-  color: black;
-  transition: color 0.3s;
-}
-
-.content a:visited {
-  color: hsl(240, 10%, 55%);
-}
-
-.content a:hover {
-    color: hsl(13, 100%, 52%);
-}
-
-#about_me {
-  padding: 10px;
-  background: hsla(0, 0%, 100%, 0.4) none repeat scroll 0% 0%;
-  width: 100%;
-  color: hsla(0, 0%, 25%, 1.0);
-  font-weight: bolder;
-  font-size: 0.8em;
-    /*background: linear-gradient(to bottom, rgba(0,0,0,0.01), rgba(0,0,0,0.8));
-  background: url("/images/triangular_@2X.png");*/
-}
-
-header li {
-  display: inline;
-  padding: 0px 10px 0px 10px;
-}
-
-#myphoto {
-  max-height: 200px;
-  margin: 40px 0px 0px 0px;
-  border: 10px solid white;
-  border-radius: 20px;
-}
-article {
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 700px;
-}
-
-#date {
-  border-top: 1px solid rgba(51, 51, 51, 0.1);
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1);
-  font-weight: 300;
-}
-
-pre {
-  overflow: auto;
-  background: #F9F9FA none repeat scroll 0% 0%;
-  border: 1px solid rgba(51, 51, 51, 0.1);
-  padding: 0 10px;
-}
-
-#disqus_thread {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-#copyright {
-  max-width: 700px;
-  padding: 20px 0 30px 0;
-  margin: 0 auto;
-  border-top: 2px solid rgba(51, 51, 51, 0.1);
-  font-size: 0.75em;
-  color: hsl(0, 0%, 60%);
-}
-
-@media (max-width: 500px) {
-  h1 {
-    font-family: 'Lustria', serif;
-    font-size: 36px;
-    margin-top: 10px;
-  }
-  /*h2 {
-    font-size: 20px;
-    margin: 20px 0 30px 0;
-  }*/
-  div {
-    margin: 20px 12px 0 12px;
-  }
-
-  li {
-    display: block;
-    padding: 5px;
-  }
-  #myphoto {
-    max-width:100%;
-    margin: 10px 0 0 0;
-  }
-
-
-}
+#copyright
+  max-width: 700px
+  padding: 20px 0 30px 0
+  margin: 0 auto
+  border-top: 2px solid rgba(51, 51, 51, 0.1)
+  font-size: 0.75em
+  color: hsl(0, 0%, 60%)

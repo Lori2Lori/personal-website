@@ -31,8 +31,7 @@ module.exports = new View (posts) ->
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning programming from scratch'
-        @div id: 'about_me', =>
-          # @p 'I am a Lawyer who is learning to become a Front-End Developer'
+        @div id: 'top-menu', =>
           @li =>
             @a href:'/000-about-this-page.html','ABOUT THIS PAGE'
 
@@ -41,9 +40,7 @@ module.exports = new View (posts) ->
           @li =>
             @a href: post.href, post.title
 
-      # @div id: 'disqus_thread'
-      #   @script src: '/scripts/disqus.js', type: 'text/javascript'
-
-      #TODO: create a footer
+      @div id: 'copyright', =>
+        @text "© Dorota Cieślińska 2015"
 
       @script src:"/scripts/analytics.js"
