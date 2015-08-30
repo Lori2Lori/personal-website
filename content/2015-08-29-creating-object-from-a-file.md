@@ -6,7 +6,7 @@ description : How to manage different kind of data in a single markdown document
 
 Today I've discovered an amazing package -[Yaml Front Matter](https://www.npmjs.com/package/yaml-front-matter), which can be used to manage different data in text.
 
-I use this [npm](https://www.npmjs.com/private-modules) package to parse [yaml](https://en.wikipedia.org/wiki/YAML) at the front of a file. It places the parsed content plus the rest of the file's content into an object literal.
+I use this [npm](https://www.npmjs.com/private-modules) package to parse [yaml](https://en.wikipedia.org/wiki/YAML) at the front of a file. It places the parsed content plus the rest of the file's content into an object.
 
 As I write, this post looks like this (I write in [markdown](http://daringfireball.net/projects/markdown/)- it's great but this package can be used on other file formats as well):
 
@@ -23,7 +23,7 @@ Thanks to this package it is easy to create an object for the later use:
 
 ```
 {
-  title: 'Creating object using markdown file',
+  title: 'Creating object from a text',
   date: '2015-08-29',
   __content: 'Today I've discovered amazing package - [Yaml Front Matter]
    (https://www.npmjs.com/package/yaml-front-matter).'
