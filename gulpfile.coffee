@@ -9,9 +9,11 @@ html_valid = require 'gulp-w3cjs'
 fs         = require 'fs'
 path       = require 'path'
 matter     = require 'yaml-front-matter'
+stylus     = require 'gulp-stylus'
 
 options = # defaults 'teacup',
   sources     : 'html/**/*'
+  style       : 'css/index.styl'
   destination : 'build/'
   assets      : 'assets/**/*'
   content     : 'content/**/*.md'
@@ -62,6 +64,13 @@ gulp.task 'index', (done) ->
   html = template posts
   fs.writeFile "build/index.html", html, done
 
+gulp.task 'css', ->
+  #Create index.css file from index.styl
+  gulp
+    .src options.style
+    .pipe stylus()
+    .pipe gulp.dest 'build/css'
+
 gulp.task 'assets', ->
   gulp
     .src options.assets
@@ -70,13 +79,18 @@ gulp.task 'assets', ->
 gulp.task 'build', gulp.series [
   'posts'
   'index'
+  'css'
   'assets'
 ]
 
 gulp.task 'watch', gulp.series [
   'build'
   (done) ->
-    gulp.watch [options.sources, options.content], gulp.series ['build']
+    gulp.watch [
+      options.sources
+      options.content
+      options.style
+    ], gulp.series ['build']
     gulp.watch options.assets, gulp.series ['assets']
 ]
 
