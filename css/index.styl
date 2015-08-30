@@ -13,19 +13,37 @@ body
   display: flex
   flex-wrap: wrap
   margin: auto
-  li
-    border: 1px solid black
-    margin: 25px
-    justify-content: center
+  justify-content: flex-start
+  max-width: 1050px
+
   a
-    height: 200px
-    width: 200px
-    color: black
-    font-family: 'Lustria', serif
+    flex-grow: 1
+    align-items: center
+    justify-content: center
+    display: flex
+
+    padding: 10px
+    margin: 25px
+    height: 228px
+    width: 228px
     font-size: 1.5em
-    display: block
-    padding: 0.4em
-    text-decoration: underline
+    text-decoration: none
+    transition: color 0.3s
+
+    border: solid 2px black
+    border-radius: 10px
+    color: black
+    transition: color 0.3s, border 0.3s, padding 0.3s
+    box-sizing: border-box
+
+    &:visited
+      border-color: hsl(240, 10%, 55%)
+      color: hsl(240, 10%, 55%)
+
+    &:hover
+      color: hsl(13, 100%, 52%)
+      border: solid 10px hsl(13, 100%, 52%)
+      padding: 1px
 
 .content
   a

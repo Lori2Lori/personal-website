@@ -1,5 +1,6 @@
 View    = require "teacup-view"
 marked  = require "marked"
+moment  = require 'moment'
 
 marked.setOptions breaks: true
 
@@ -27,10 +28,20 @@ module.exports = new View (posts) ->
             @a href:'/000-about-this-page.html','ABOUT THIS PAGE'
 
       @tag 'main', =>
-        @ul class: 'posts', =>
+        @div class: 'posts', =>
           for post in posts.reverse()
-            @li =>
-              @a href: post.href, post.title
+            @a href: post.href,
+              # TODO: Add date and description to posts 'bricks'
+              # if post.date? then =>
+              #   date = moment post.date
+              #   @time datetime: date.format(), date.calendar null,
+              #     sameDay: '[Today]',
+              #     nextDay: '[Tomorrow]',
+              #     nextWeek: 'dddd',
+              #     lastDay: '[Yesterday]',
+              #     lastWeek: '[Last] dddd'
+              #     sameElse : "MMMM Do YYYY"
+              post.title
 
       @div id: 'copyright', =>
         @text "© Dorota Cieślińska 2015"
