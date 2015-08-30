@@ -89,7 +89,7 @@ gulp.task 'watch', gulp.series [
     gulp.watch [
       options.sources
       options.content
-      options.style
+      'css/**/*'
     ], gulp.series ['build']
     gulp.watch options.assets, gulp.series ['assets']
 ]

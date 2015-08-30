@@ -26,10 +26,11 @@ module.exports = new View (posts) ->
           @li =>
             @a href:'/000-about-this-page.html','ABOUT THIS PAGE'
 
-      @ul class: 'posts', =>
-        for post in posts.reverse()
-          @li =>
-            @a href: post.href, post.title
+      @tag 'main', =>
+        @ul class: 'posts', =>
+          for post in posts.reverse()
+            @li =>
+              @a href: post.href, post.title
 
       @div id: 'copyright', =>
         @text "© Dorota Cieślińska 2015"
