@@ -19,15 +19,6 @@ module.exports = new View (posts) ->
       @title "Learning programming from scratch"
 
     @body =>
-      # Google Tag Manager
-      @noscript =>
-        @iframe
-          src:"//www.googletagmanager.com/ns.html?id=GTM-TL38JX"
-          height:"0"
-          width:"0"
-          style:"display:none;visibility:hidden"
-      @script src:"/scripts/google-tag-manager.js"
-      # End Google Tag Manager
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
         @h1 'Learning programming from scratch'
