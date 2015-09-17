@@ -43,17 +43,17 @@ This instruction assumes that you use some Linux system. Setting it up on Mac OS
       `npm` is installed along with `node.js` or `io.js`, so you should already have it.
 
   4.  Run:
-
-  ```
-  node_modules/.bin/gulp serve
-  ```
-
-      This will:
-
-  * Compile your code into `build/` directory
-  * Start watching for changes and rebuild when necessary
-  * Start a local web server on port 8000
-  * Open your web browser and point it to this server
+    
+      ```
+      node_modules/.bin/gulp serve
+      ```
+    
+    This will:
+    
+      * Compile your code into `build/` directory
+      * Start watching for changes and rebuild when necessary
+      * Start a local web server on port 8000
+      * Open your web browser and point it to this server
 
   5.  You are ready! Now just make changes to the code and in few seconds they should be reflected in the browser.
 
