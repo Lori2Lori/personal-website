@@ -31,7 +31,9 @@ module.exports = new View (posts) ->
         @div class: 'posts', =>
           for post in posts.reverse()
             @a href: post.href,
-              # TODO: Add date and description to posts 'bricks'
+              post.title
+
+              # TODO: Add dates to posts
               # if post.date? then =>
               #   date = moment post.date
               #   @time datetime: date.format(), date.calendar null,
@@ -41,7 +43,9 @@ module.exports = new View (posts) ->
               #     lastDay: '[Yesterday]',
               #     lastWeek: '[Last] dddd'
               #     sameElse : "MMMM Do YYYY"
-              post.title
+
+              # TODO: Add description and date to posts 'bricks'
+              # post.description
 
       @div id: 'copyright', =>
         @text "© Dorota Cieślińska 2015"
