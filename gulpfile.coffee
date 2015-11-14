@@ -37,6 +37,8 @@ gulp.task 'posts', ->
 
       post = matter.loadFront md
       file.title = post.title
+      file.description = post.description
+      file.date = post.date
 
       html = template post
       file.contents = new Buffer html
@@ -50,7 +52,9 @@ gulp.task 'posts', ->
       base = path.join __dirname, 'build'
       href = path.relative base, file.path
       title = file.title
-      post = {title, href}
+      description = file.description
+      date = file.date
+      post = {title, href, description, date}
       posts.push post
       do done
 
