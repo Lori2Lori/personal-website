@@ -36,9 +36,7 @@ gulp.task 'posts', ->
       md = file.contents.toString enc
 
       post = matter.loadFront md
-      file.title = post.title
-      file.description = post.description
-      file.date = post.date
+      file.post = post
 
       html = template post
       file.contents = new Buffer html
@@ -49,12 +47,9 @@ gulp.task 'posts', ->
     .pipe through.obj (file, enc, done) ->
 
       # Add title and file.path to posts array
+      { post } = file
       base = path.join __dirname, 'build'
-      href = path.relative base, file.path
-      title = file.title
-      description = file.description
-      date = file.date
-      post = {title, href, description, date}
+      post.href = path.relative base, file.path
       posts.push post
       do done
 
