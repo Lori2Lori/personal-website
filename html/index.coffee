@@ -30,8 +30,9 @@ module.exports = new View (posts) ->
       @tag 'main', =>
         @div class: 'posts', =>
           for post in posts.reverse()
-            @a href: post.href,
-              post.title
+            @a href: post.href, =>
+              @h4 class: 'title', post.title
+              @p class: 'description', post.description
 
               # TODO: Add dates to posts
               # if post.date? then =>
@@ -45,7 +46,6 @@ module.exports = new View (posts) ->
               #     sameElse : "MMMM Do YYYY"
 
               # TODO: Add description and date to posts 'bricks'
-              # post.description
 
       @div id: 'copyright', =>
         @text "© Dorota Cieślińska 2015"

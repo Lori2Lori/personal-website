@@ -1,7 +1,7 @@
 ---
-title : An advantage of writing own code while using tutorials
+title : Advantages of writing own code while using tutorials
 date : 2015-09-30
-description :
+description : While it's quite easy to follow tutorials, I prefer to change code to learn other things as well.
 ---
 
 I've made another discovery while learning [React.js](https://facebook.github.io/react/) from [Build Web Apps with React JS and Flux](https://www.udemy.com/learn-and-understand-reactjs) course on Udemy.com. My code is on GitHub [here](https://github.com/Lori2Lori/TODO-list-React-with-Fire-Base).
@@ -10,7 +10,7 @@ Learning from internet courses is tempting and may seem easy when following inst
 
 **First**, I write in CoffeScript instead of plain JavaScript. It's more simple and in my opinion more efficient, braces and commas are barely needed.
 
-**Second**, I build my own build system. I take my old build system and try to make it better each time and of course adjust to actual needs.
+**Second**, I create my own build system. I take my old build system and try to make it better each time and of course adjust to actual needs.
 
 **Third**, I create components as soon as I get an idea what do I want to make, before instructor show how to od it. I also play with different options that can be used in the future.
 

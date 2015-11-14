@@ -1,5 +1,6 @@
 ---
-title : About this webpage
+title : About this page
+description : 
 ---
 
 On this website I'd like to share my experience with learning programming, especially web development and design.
