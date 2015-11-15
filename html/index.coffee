@@ -35,17 +35,6 @@ module.exports = new View (posts) ->
               @p class: 'description', post.description
 
               # TODO: Add dates to posts
-              # if post.date? then =>
-              #   date = moment post.date
-              #   @time datetime: date.format(), date.calendar null,
-              #     sameDay: '[Today]',
-              #     nextDay: '[Tomorrow]',
-              #     nextWeek: 'dddd',
-              #     lastDay: '[Yesterday]',
-              #     lastWeek: '[Last] dddd'
-              #     sameElse : "MMMM Do YYYY"
-
-              # TODO: Add description and date to posts 'bricks'
 
       @div id: 'copyright', =>
         @text "© Dorota Cieślińska 2015"

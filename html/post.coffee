@@ -32,23 +32,30 @@ module.exports = new View (post) ->
         if post.date? then @h6 id: 'date', =>
           date = moment post.date
           @span 'Published: '
-          @time datetime: date.format(), date.calendar null,
-            sameDay: '[Today]',
-            nextDay: '[Tomorrow]',
-            nextWeek: 'dddd',
-            lastDay: '[Yesterday]',
-            lastWeek: '[Last] dddd'
-            sameElse : "MMMM Do YYYY"
+          @time datetime: date.format(), date.format('YYYY-MM-DD')
 
         markdown post.__content
 
     @div id: 'disqus_thread', =>
-      @script src: '/scripts/disqus.js', type: 'text/javascript'
+      @script src: '/scripts/disqus.js', type: 'text/javascript' # ?
     @div id: 'copyright', =>
       @text "© Dorota Cieślińska 2015"
+
 
       # jQuery (necessary for jQuery JavaScript plugins)
       @script src: "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js", type: "text/javascript"
       @script src: "https://code.jquery.com/jquery-1.11.2.min.js"
-      @script src:"/scripts/analytics.js"
+      @script src: "/scripts/analytics.js"
       @script src: '/scripts/disqus2.js', type: 'text/javascript'
+      @script src: 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js'
+      @coffeescript =>
+        # Replace absolute date in the time element's content with relative one
+        element = $("#date time")
+        date = moment element.attr("datetime")
+        element.text date.calendar null,
+          sameDay: '[Today]',
+          nextDay: '[Tomorrow]',
+          nextWeek: 'dddd',
+          lastDay: '[Yesterday]',
+          lastWeek: '[Last] dddd'
+          sameElse : "MMMM Do YYYY"
