@@ -32,7 +32,7 @@ module.exports = new View (post) ->
         if post.date? then @h6 id: 'date', =>
           date = moment post.date
           @span 'Published: '
-          @time datetime: date.format(), date.format('YYYY-MM-DD')
+          @time datetime: date.format(), date.format('MMMM Do YYYY')
 
         markdown post.__content
 

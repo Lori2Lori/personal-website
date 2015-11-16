@@ -1,6 +1,6 @@
 ---
 title : Advantages of writing own code while using tutorials
-date : 2015-11-14
+date : 2015-09-30
 description : While it's quite easy to follow tutorials, I prefer to change code to learn other things as well.
 ---
 

@@ -67,4 +67,6 @@ How is it used on this page exactly? As you can see below, I use "title", "date"
 
 I hope you liked this post and you'll try make a use of front matter in some of your projects.
 
-Ps. I manage date using [moment](http://momentjs.com/docs/) and it may be nice subject for another post :)
+Ps. I manage date using [moment](http://momentjs.com/docs/) and it may be nice subject for another post :)*
+
+* I wrote about it on the post [Replace absolute date in the time element's content with relative one](http://lori2lori.rocks/2015-11-16-replacing-date-in-post.html)
