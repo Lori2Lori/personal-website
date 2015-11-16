@@ -4,7 +4,7 @@ date : 2015-08-29
 description : How to manage different kind of data in a single markdown document, using Yaml Front Matter.
 ---
 
-Today I've discovered an amazing package -[Yaml Front Matter](https://www.npmjs.com/package/yaml-front-matter), which can be used to manage different data in text.
+Today I've discovered an amazing package [Yaml Front Matter](https://www.npmjs.com/package/yaml-front-matter), which can be used to manage different data in text.
 
 I use this [npm](https://www.npmjs.com/private-modules) package to parse [yaml](https://en.wikipedia.org/wiki/YAML) at the front of a file. It places the parsed content plus the rest of the file's content into an object.
 
@@ -67,6 +67,4 @@ How is it used on this page exactly? As you can see below, I use "title", "date"
 
 I hope you liked this post and you'll try make a use of front matter in some of your projects.
 
-Ps. I manage date using [moment](http://momentjs.com/docs/) and it may be nice subject for another post :)*
-
-* I wrote about it on the post [Replace absolute date in the time element's content with relative one](http://lori2lori.rocks/2015-11-16-replacing-date-in-post.html)
+Ps. I manage date using [moment](http://momentjs.com/docs/) and I write about it on the post [Replace absolute date with relative one](http://lori2lori.rocks/2015-11-16-replacing-date-in-post.html).
