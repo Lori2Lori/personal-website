@@ -13,7 +13,7 @@ Now I'm here - installing the same programs 2nd time this week, because of serio
 ###Let's get started
 
 1. Terminal - it is already installed on Linux and OS, I've heard there isn't any similar program for Windows. By Terminal you have access to you system files and you can test programs just on your desktop.
-Program called Guake makes Terminal even more useful, adding many features like multiply windows.
+Program called [Guake](https://github.com/Guake/guake) makes Terminal even more useful, adding many features like multiply windows.
 
 2. Text editor. I personally use Atom but you can choose your own favourite. There are many of them, someone just recommended meBrackets.
 Why use this editor instead of some simple pre-build editor or WORD? Reasons are countless.

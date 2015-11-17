@@ -10,4 +10,4 @@ As I've started to build this website I was a lawyer with several years of profe
 
 I have ambitious goal to make this website totally from scratch, so I'm not using here any pre-build CMS. I will be experimenting with better and worse features.
 
-I'm open to suggestions about improving this website, feel free to contact me at [twitter](https://twitter.com/Lori2Lori) and visit me at [GitHub](https://github.com/Lori2Lori).
+I'm open to suggestions about improving this website, feel free to contact me at [<i class="fa fa-github"> Twitter</i>](https://twitter.com/Lori2Lori) and visit me at [<i class="fa fa-github"> GitHub</i>](https://github.com/Lori2Lori).

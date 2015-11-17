@@ -39,6 +39,19 @@ module.exports = new View (post) ->
 
     @div id: 'disqus_thread', =>
       @script src: '/scripts/disqus.js', type: 'text/javascript' # ?
+
+    @div id: 'footer', =>
+      @ul =>
+        @li =>
+          @a href:'https://github.com/Lori2Lori', =>
+            @span class:"fa fa-github fa-4x"
+        @li =>
+          @a href:'https://twitter.com/Lori2Lori', =>
+            @span class:"fa fa-twitter fa-4x"
+        @li =>
+          @a href:'http://stackoverflow.com/users/5236216/dorota-cieslinska', =>
+            @span class:"fa fa-stack-overflow fa-4x"
+            
     @div id: 'copyright', =>
       @text "© Dorota Cieślińska 2015"
 

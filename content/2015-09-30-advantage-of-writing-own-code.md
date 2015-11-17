@@ -4,7 +4,7 @@ date : 2015-09-30
 description : While it's quite easy to follow tutorials, I prefer to change code to learn other things as well
 ---
 
-I've made another discovery while learning [React.js](https://facebook.github.io/react/) from [Build Web Apps with React JS and Flux](https://www.udemy.com/learn-and-understand-reactjs) course on Udemy.com. My code is on GitHub [here](https://github.com/Lori2Lori/TODO-list-React-with-Fire-Base).
+I've made another discovery while learning [React.js](https://facebook.github.io/react/) from [Build Web Apps with React JS and Flux](https://www.udemy.com/learn-and-understand-reactjs) course on [Udemy](udemy.com). My code is on [<i class="fa fa-github"> GitHub</i>](https://github.com/Lori2Lori/TODO-list-React-with-Fire-Base).
 
 Learning from internet courses is tempting and may seem easy when following instructor step by step. I've discovered an exciting way how to learn the most from each course:
 
