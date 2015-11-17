@@ -1,7 +1,7 @@
 ---
 title : Contemptuous html lists and debugging
 date : 2015-03-19
-description: Here I explain how to use gulp and w3 validator to debug an html code automatically.
+description: Here I explain how to use gulp and w3 validator to debug an html code automatically
 ---
 
 Today I've discovered that `<li>` elements in list have to be in `<ul>`, `<ol>` or `<menu>` container. It can't be inside `<div>` element. Why? It remains a mystery to me (for now).

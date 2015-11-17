@@ -1,7 +1,7 @@
 ---
 title : Installing tools on Mac
 date : 2015-03-18
-description: Why I've decided to switch from Windows to Unix-like systems and why it wasn't easy.
+description: Why I've decided to switch from Windows to Unix-like systems and why it wasn't easy
 ---
 
 I didn't even try to program on Windows. After just starting using on-line courses like:

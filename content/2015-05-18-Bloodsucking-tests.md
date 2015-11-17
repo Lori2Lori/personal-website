@@ -1,7 +1,7 @@
 ---
 title : Bloodsucking tests
 date : 2015-05-18
-description: Description of my first attempt to use tests in programming, with examples.
+description: Description of my first attempt to use tests in programming, with examples
 ---
 
 The most important lesson from yesterday: programming requires PATIENCE and SELF AWARENESS. I've learned one of the most important lesson in my (programmer) life. Don't get upset just because you don't know why something doesn't work. There are tons of things that could went wrong really and sometimes these are other peoples mistakes. Take a deep breath, go for a walk and start over with a fresh mind.

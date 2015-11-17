@@ -1,11 +1,11 @@
 ---
 title : Starting programming from scratch
 date : 2015-03-17
-description: Where I started to learn programming, what tools were necessary or just useful.
+description: Where I started to learn programming, what tools were necessary or just useful
 ---
 
-So you want to start programming? Or maybe just make some websites? First you probably tougth 'Ok, I'll install something like javascript, python and it will work just fine'? These were my thoughts - how wrong I was! To start programming, you need whole bunch of programs, so I found out when I decided to become front-end web developer.
-At the beggining, you need whole package of programs - but guess what ? They are all in different places and to install one of them you need another one... and so on.
+So you want to start programming? Or maybe just make some websites? First you probably thought 'Ok, I'll install something like javascript, python and it will work just fine'? These were my thoughts - how wrong I was! To start programming, you need whole bunch of programs, so I found out when I decided to become front-end web developer.
+At the beginning, you need whole package of programs - but guess what ? They are all in different places and to install one of them you need another one... and so on.
 Now I'm here - installing the same programs 2nd time this week, because of serious computer crash. And I thought this is the best subject for the first post on my website.
 
 * Please note that every developer build his own set of programs. I've made my choice because of my friend who recommended these specific tools and is helping me to learn them.

@@ -31,10 +31,10 @@ module.exports = new View (posts) ->
         @div class: 'posts', =>
           for post in posts.reverse()
             @a href: post.href, =>
-              @h4 class: 'title', post.title
+              @h5 class: 'title', post.title
               @p class: 'description', post.description
 
-              # TODO: Add dates to posts
+              # TODO: Think about adding dates to posts (maybe)
 
       @div id: 'copyright', =>
         @text "© Dorota Cieślińska 2015"

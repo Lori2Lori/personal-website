@@ -1,7 +1,7 @@
 ---
-title : Replace absolute date in the time element's content with relative one
+title : Replace absolute date with relative one
 date : 2015-11-16
-description :
+description : Relative date looks just nicer, here I show how to implement it on the website
 ---
 
 As I've mentioned it on the previous post [Creating object from a text](http://lori2lori.rocks/2015-08-29-creating-object-from-a-file.html), I'm using [moment](http://momentjs.com/docs/) library, to insert dates on my website.
@@ -20,7 +20,7 @@ It provides easy, flexible way to [display](http://momentjs.com/docs/#/displayin
 | Day   (Do)     |  1st 2nd ... 30th 31st|
 | Year  (YYYY)   |   1970 ... 2018 2030  |
 
-At first, I've inserted code into the `<body>` tag:
+At first, I've inserted code into the `<body>` tag, under post title:
 
 ```coffeescript
 if post.date? then @h6 id: 'date', =>
@@ -36,19 +36,22 @@ if post.date? then @h6 id: 'date', =>
 ```
 It caused a post date appear always as "Yesterday", regardless of the current date. Well, it wasn't exactly what I expected.
 
- The problem arised because function `date.calendar` was called only once, when the static page was created on the server.
- I had to figure out, how to render date on the web browser site, instead of the server site.
+After a while I've find out that the problem arised because function `date.calendar` was called only once, when the static page was created on the server.
+I had to figure out, how to render date on the web browser site, instead of the server site.
 
-The code looked like that:
+The output looked like that:
 
 ```html
-<h6 id="date"><span>Published: </span><time datetime="2015-11-14T00:00:00+00:00">Yesterday</time></h6>
+<h6 id="date"><span>Published: </span>
+<time datetime="2015-11-14T00:00:00+00:00">Yesterday</time></h6>
 ```
 I used jQuery script to find the date element in my html code and voila, the problem was solved.
 
 ```coffeescript
 @coffeescript =>
-  # @coffeescript tag is a coffeescript function that converts coffee into js directly. Thanks to that, there is no need for creating additional .js file for scripts.
+  ### @coffeescript tag is a coffeescript function that converts coffee into js directly.
+  Thanks to that, there is no need for creating additional .js file for scripts.
+  ###
 
   element = $("#date time")
   date = moment element.attr("datetime")
@@ -70,4 +73,4 @@ if post.date? then @h6 id: 'date', =>
   @time datetime: date.format(), date.format('MMMM Do YYYY')
 ```
 
-The result is most visible in newest posts.
+The result is most visible in newest posts :)

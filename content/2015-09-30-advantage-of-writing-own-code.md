@@ -1,7 +1,7 @@
 ---
 title : Advantages of writing own code while using tutorials
 date : 2015-09-30
-description : While it's quite easy to follow tutorials, I prefer to change code to learn other things as well.
+description : While it's quite easy to follow tutorials, I prefer to change code to learn other things as well
 ---
 
 I've made another discovery while learning [React.js](https://facebook.github.io/react/) from [Build Web Apps with React JS and Flux](https://www.udemy.com/learn-and-understand-reactjs) course on Udemy.com. My code is on GitHub [here](https://github.com/Lori2Lori/TODO-list-React-with-Fire-Base).

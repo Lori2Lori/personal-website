@@ -1,6 +1,7 @@
 ---
 title : About this page
-description : 
+date : 2015-02-05
+description :
 ---
 
 On this website I'd like to share my experience with learning programming, especially web development and design.
