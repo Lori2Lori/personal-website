@@ -23,7 +23,7 @@ module.exports = new View (post) ->
       @header =>
         @a href: '/', =>
           @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
-        @h1 'Learning programming from scratch'
+        @h2 'Learning programming from scratch'
         @div id: 'top-menu', =>
           @li =>
             @a href:'/','HOME'
@@ -51,7 +51,7 @@ module.exports = new View (post) ->
         @li =>
           @a href:'http://stackoverflow.com/users/5236216/dorota-cieslinska', =>
             @span class:"fa fa-stack-overflow fa-4x"
-            
+
     @div id: 'copyright', =>
       @text "© Dorota Cieślińska 2015"
 

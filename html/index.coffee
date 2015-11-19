@@ -23,7 +23,7 @@ module.exports = new View (posts) ->
     @body =>
       @header =>
         @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
-        @h1 'Learning programming from scratch'
+        @h2 'Learning programming from scratch'
         @div id: 'top-menu', =>
           @li =>
             @a href: '/000-about-this-page.html','ABOUT THIS PAGE'

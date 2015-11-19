@@ -74,3 +74,4 @@ if post.date? then @h6 id: 'date', =>
 ```
 
 The result is most visible in newest posts :)
+<img class="img-responsive" src="/images/dates-flexible.png" alt="Published : Last Monday" >
