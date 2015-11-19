@@ -1,7 +1,7 @@
 ---
 title : My inspiration - part 1 - Small things - Jonathan Cutrell
 date : 2015-11-19
-description :
+description : A series where I describe people, mostly programmers, who inspire me to take action and not give up.
 ---
 
 Couple months ago I've talked to my friend Tomek (who happens to be IT manager, public speaker and a personal coach as well) and I've decided I want to recognize people who inspire me to action. I want it, because as Nelson Mandela rightly pointed out: *"some things seem to be impossible until their done"*.
