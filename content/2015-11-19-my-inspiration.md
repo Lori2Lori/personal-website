@@ -1,7 +1,7 @@
 ---
 title : My inspiration - part 1 - Small things - Jonathan Cutrell
 date : 2015-11-19
-description : A series where I describe people, mostly programmers, who inspire me to take action and not give up.
+description : A series where I describe people, mostly programmers, who inspire me to take action and not give up
 ---
 
 Couple months ago I've talked to my friend Tomek - an IT manager, public speaker and personal coach. He suggested that I should recognize people who inspire me to take action. Ever since I've wanted to write this post but stuck with thought that it has to be perfect.
