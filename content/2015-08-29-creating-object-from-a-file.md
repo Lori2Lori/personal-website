@@ -10,18 +10,19 @@ I use this [npm](https://www.npmjs.com/private-modules) package to parse [yaml](
 
 As I write, this post looks like this (I write in [markdown](http://daringfireball.net/projects/markdown/)- it's great but this package can be used on other file formats as well):
 
-```
+```yaml
 ---
 title : Creating object from a text
 date : 2015-08-29
 ---
 Today I've discovered amazing package - [Yaml Front Matter]
  (https://www.npmjs.com/package/yaml-front-matter).
+
 ```
 
 Thanks to this package it is easy to create an object for the later use:
 
-```
+```javascript
 {
   title: 'Creating object from a text',
   date: '2015-08-29',
@@ -32,7 +33,7 @@ Thanks to this package it is easy to create an object for the later use:
 
 It is also extremely easy to insert more details to the document:
 
-```
+```javascript
 contact: {
   email: 'email@domain.com',
   address: 'some location'
@@ -48,7 +49,7 @@ run: [Function],
 
 How is it used on this page exactly? As you can see below, I use "title", "date" and "__content" to create my posts with a little help of coffeescript.
 
-```
+```coffeescript
 @article class: 'content', =>
   @h1 post.title
   if post.date? then @h6 =>

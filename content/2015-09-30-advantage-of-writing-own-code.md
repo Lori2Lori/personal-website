@@ -25,7 +25,7 @@ Here is some simple example:
 
 In tutorial code looks like that:
 
-```
+```jsx
 render: function() {
   return <ul>
     {this.renderList()}
@@ -42,7 +42,7 @@ renderList: function() {
 
 And my code:
 
-```
+```coffeescript
 render: ->
 <ul>
   { if @props.items is null

@@ -62,6 +62,7 @@ I used jQuery script to find the date element in my html code and voila, the pro
     lastDay: '[Yesterday]',
     lastWeek: '[Last] dddd'
     sameElse : "MMMM Do YYYY"
+
 ```
 
 There was one thing left to do: make sure that the date will be visible even if javascript is disabled in the browser. That's why I left an absolute `date.format('Do MMMM YYYY')` in the `<body>`.

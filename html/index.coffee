@@ -17,6 +17,7 @@ module.exports = new View (posts) ->
       @meta name: "viewport", content: "width=device-width, initial-scale=1"
       #<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
       @link rel: "stylesheet", href: "/css/index.css"
+      @link rel: "stylesheet", href: "/css/prism.css"
       @link rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
       @title "Learning programming from scratch"
 
@@ -53,3 +54,4 @@ module.exports = new View (posts) ->
         @text "© Dorota Cieślińska 2015"
 
       @script src:"/scripts/analytics.js"
+      @script src: "/scripts/prism.js"

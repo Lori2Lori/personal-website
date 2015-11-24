@@ -1,5 +1,6 @@
 @import 'header'
 @import 'typography'
+@import 'prism'
 
 body
   margin: 0
@@ -73,15 +74,19 @@ article
   margin: 0 auto
   max-width: 700px
 
-pre
-  overflow: auto
-  background: #F9F9FA none repeat scroll 0% 0%
-  border: 1px solid rgba(51, 51, 51, 0.1)
-  padding: 0 10px
+// pre
+//   overflow: auto
+//   background: #F9F9FA none repeat scroll 0% 0%
+//   border: 1px solid rgba(51, 51, 51, 0.1)
+//   padding: 0 10px
+//
+// code
+//   font-size: 1.2em
+//   background-color: rgb(249, 249, 250)
 
-code
+:not(pre) > code
   font-size: 1.2em
-  background-color: rgb(249, 249, 250)
+  background: #f5f2f0
 
 #disqus_thread
   max-width: 700px

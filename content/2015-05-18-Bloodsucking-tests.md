@@ -8,7 +8,7 @@ The most important lesson from yesterday: programming requires PATIENCE and SELF
 
 I've learned this passing my first tests with Chai Mocha. Just couple weeks ago when I've heard "chai" I thought "tea" and "mocha" reminded me only of coffe. As you can imagine, programming is more than tea and coffee. I've discovered something called "tests-driven programming" - basically, first the developer writes some test case that describes a desired function of a program. Here I'm using [coffeescript](http://coffeescript.org/), a language that easy compiles into JavaScript:
 
-```
+```coffeescript
 it 'has a property species that equals cat', ->
   expect cat
     .to.have.property 'species'
@@ -18,7 +18,7 @@ it 'has a property species that equals cat', ->
 ```
 Then he produces the code to pass that test, something like that:
 
-```
+```coffeescript
 module.exports =
   species : 'cat'
 
