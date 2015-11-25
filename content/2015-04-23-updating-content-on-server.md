@@ -17,24 +17,24 @@ Next time I'll describe how to place it on server for the first time. Now I want
 
 First, in terminal, I need to log in to my  server as root, using [ssh (secure shell)](http://en.wikipedia.org/wiki/Secure_Shell)
 
-```
+```bash
 ssh root@lori2lori.rocks
 ```
 
 Then I need to go to my repository (directory where my files are). In my case it's 'personal-website'
 
-```
+```bash
 cd ~/personal-website
 ```
 
 Then pull latest changes from GitHub
-```
+```bash
 git pull
 ```
 
 I decided not to install iojs on server and use containers instead
 
-```
+```bash
 docker run -itw "/personal-website" --rm -v ~/personal-website:/personal-website iojs npm run build
 ```
 

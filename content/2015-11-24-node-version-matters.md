@@ -14,10 +14,16 @@ It turns out that JavaScript is a fast moving language nowadays. I had [node.js]
 
 Fortunately, it was easy enough to update node to the latest version using [nvm](https://github.com/creationix/nvm) (Node Version Manager). There are other ways to update node but with nvm it was like a breeze:
 
-```markup
+```bash
 Try `nvm ls-remote` to browse available versions.
 Dorotas-MacBook-Air:~ dorota$ nvm install v5.1.0
 ######################################## 100.0%
 Checksums empty
 Now using node v5.1.0 (npm v3.3.12)
+```
+
+If you want to install the latest node version, instead of version pointer (for example v5.1.0) it is sufficient to just use `node`:
+
+```bash
+nvm install node
 ```

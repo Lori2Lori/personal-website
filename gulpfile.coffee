@@ -82,16 +82,14 @@ gulp.task 'build', gulp.series [
   'assets'
 ]
 
-gulp.task 'watch', gulp.series [
-  'build'
-  (done) ->
-    gulp.watch [
-      options.sources
-      options.content
-      'css/**/*'
-    ], gulp.series ['build']
-    gulp.watch options.assets, gulp.series ['assets']
-]
+gulp.task 'watch', (done) ->
+  gulp.watch [
+    options.sources
+    options.content
+    'css/**/*'
+  ], gulp.series ['build']
+  gulp.watch options.assets, gulp.series ['assets']
+
 
 gulp.task 'clean', (done) ->
   del options.destination, done
@@ -106,4 +104,9 @@ gulp.task 'serve', gulp.parallel [
       .pipe webserver
         livereload: true,
         open: true
+]
+
+gulp.task 'develop', gulp.series [
+  'build'
+  'serve'
 ]
