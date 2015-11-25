@@ -8,7 +8,7 @@ This instruction assumes that you use some Linux system. Setting it up on Mac OS
 
   1.  Clone this repository (or pull if you already have it)
 
-  2.  Install node.js (or io.js)
+  2.  Install node.js
 
       First if you don't have curl installed, run:
 
@@ -24,13 +24,8 @@ This instruction assumes that you use some Linux system. Setting it up on Mac OS
       And then:
 
       ```
-      nvm install iojs
+      nvm install node
       ```
-      To activate iojs in every fresh opened terminal from now on use this command:
-
-      ```
-      nvm alias default iojs
-      ```     
 
   3.  Inside repository directory install all dependencies listed in [package.json](./package.json) using
 
@@ -40,16 +35,16 @@ This instruction assumes that you use some Linux system. Setting it up on Mac OS
 
       This will install [gulp][] in `node_modules/.bin/gulp` among other things.
 
-      `npm` is installed along with `node.js` or `io.js`, so you should already have it.
+      `npm` is installed along with `node.js`, so you should already have it.
 
   4.  Run:
     
       ```
-      node_modules/.bin/gulp serve
+      npm run develop
       ```
-    
+
     This will:
-    
+
       * Compile your code into `build/` directory
       * Start watching for changes and rebuild when necessary
       * Start a local web server on port 8000
