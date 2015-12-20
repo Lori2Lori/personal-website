@@ -1,4 +1,4 @@
-Personal website about programming and design.
+Personal website about my adventure with learning programming.
 ==============================================
 
 How to start hacking on this project
@@ -38,7 +38,7 @@ This instruction assumes that you use some Linux system. Setting it up on Mac OS
       `npm` is installed along with `node.js`, so you should already have it.
 
   4.  Run:
-    
+
       ```
       npm run develop
       ```
