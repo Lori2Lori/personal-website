@@ -1,115 +1,42 @@
-@import 'header'
 @import 'typography'
+@import 'footer'
+@import 'header'
+@import 'single-post'
 @import 'prism'
 
 body
+  background: white
   margin: 0
-  line-height: 1.5em
-  text-align: justify
-  color: hsla(0, 0%, 15%, 1.0)
 
-.posts
-  list-style: none
-  text-align: center
+main
   display: flex
-  flex-wrap: wrap
+  flex-flow: row-reverse wrap
+  max-width: 900px
   margin: auto
-  justify-content: flex-start
-  max-width: 1050px
 
-  a
-    flex-grow: 1
-    flex-direction: column
-    align-items: center
-    justify-content: center
-    display: flex
+  > *
+    flex: 0 100%
 
-    padding: 10px
-    margin: 25px
-    height: 228px
-    width: 228px
-    font-size: 1.5em
-    text-decoration: none
-    transition: color 0.3s
+  .posts
+    @import 'posts'
+    .title
+      margin: 0
+    p:last-child
+      margin-bottom: 0
 
-    border: solid 2px black
-    border-radius: 10px
-    color: black
-    transition: color 0.3s, border 0.3s, padding 0.3s
-    box-sizing: border-box
+    @media (min-width: 600px)
+      flex: 1 0 0px
 
-    &:visited
-      border-color: hsl(240, 10%, 55%)
-      color: hsl(240, 10%, 55%)
+  .about
+    padding: 20px
+    text-align: justify
+    @import 'social'
+    .social
+      font-size: 50%
 
-    &:hover
-      color: hsl(13, 100%, 52%)
-      border-color: hsl(13, 100%, 52%)
+    @media (min-width: 600px)
+      flex: 0 0 200px
 
-.content
-  a
-    color: black
-    transition: color 0.3s
-
-    &:visited
-      color: hsl(240, 10%, 55%)
-
-    &:hover
-      color: hsl(13, 100%, 52%)
-
-.img-responsive
-
-  display: block;
-  max-width: 100%;
-  height: auto;
-
-
-#date
-  border-top: 1px solid rgba(51, 51, 51, 0.1)
-  border-bottom: 1px solid rgba(51, 51, 51, 0.1)
-  font-weight: 300
-
-article
-  padding: 20px
-  margin: 0 auto
-  max-width: 700px
-
-// pre
-//   overflow: auto
-//   background: #F9F9FA none repeat scroll 0% 0%
-//   border: 1px solid rgba(51, 51, 51, 0.1)
-//   padding: 0 10px
-//
-// code
-//   font-size: 1.2em
-//   background-color: rgb(249, 249, 250)
-
-:not(pre) > code
-  font-size: 1.2em
-  background: #f5f2f0
-
-#disqus_thread
-  max-width: 700px
-  margin: 0 auto
-
-#copyright
-  // max-width: 700px
-  padding: 20px 0 30px 50px
-  margin: 0 auto
-  border-top: 2px solid rgba(51, 51, 51, 0.1)
-  font-size: 0.75em
-  color: hsl(0, 0%, 60%)
-  text-align: center
-
-#footer
-  border-top: 2px solid rgba(51, 51, 51, 0.1)
-  ul
-    text-align: center
-    li
-      display: inline-block
-      margin: 1.5em
-  a
-    color: rgb(129, 129, 152)
-    transition: color 0.3s
-    &:hover
-      color: hsl(13, 100%, 52%)
+    @import 'logo'
+    img.logo
+      width: 200px

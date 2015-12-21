@@ -1,44 +1,27 @@
 header
+  font-family: 'Permanent Marker', cursive
   text-align: center
+  padding: 40px
   background-image: url('/images/square_bg_@2X.png')
   background-repeat: repeat
-  color: black
-  margin: 0
-  // background: #ff3333
-  // background: -moz-linear-gradient(135deg, black ,#ff3333, yellow, #ff3333, black)
-  // background: linear-gradient(135deg, black ,#ff3333, yellow, #ff3333, black)
-  // background: -webkit-linear-gradient(135deg, black ,#ff3333, yellow, #ff3333, black)
+  border-bottom: 2px solid rgba(51, 51, 51, 0.1)
 
-  h1
-    font-size: 2.5em
-    @media (max-width: 500px)
-      font-size: 1.5em
+  h1.title
+    font-family: inherit
+    font-size: 3em
+    margin-top: 0
+
+    @media (min-width: 600px)
+      font-size: 4em
+
+  @import 'logo'
+  img.logo
+    max-width: 270px
 
   a
-    color: black
-    transition: color 0.3s
-    // text-decoration: none
+    text-decoration: none
+    color: hsl(0, 88%, 34%)
+
     &:hover
-      color: hsl(13, 100%, 52%)
-
-  li
-    display: inline
-    padding: 0px 10px 0px 10px
-
-  #myphoto
-    max-height: 270px
-    margin: 20px 0px 0px 0px
-    border: 10px solid white
-    border-radius: 20px
-
-    @media (max-width: 500px)
-      max-width:100%
-      max-height: 200px
-      margin: 10px 0 0 0
-
-  #top-menu
-    background: hsla(0, 0%, 100%, 0.4) none repeat scroll 0% 0%
-    width: 100%
-    color: hsla(0, 0%, 25%, 1.0)
-    font-weight: bolder
-    font-size: 1em
+      color: hsl(0, 88%, 80%)
+      transition: color 0.3s

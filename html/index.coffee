@@ -23,11 +23,9 @@ module.exports = new View (posts) ->
 
     @body =>
       @header =>
-        @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
-        @h2 'Learning programming from scratch'
-        @div id: 'top-menu', =>
-          @li =>
-            @a href: '/000-about-this-page.html','ABOUT THIS PAGE'
+        @h1 class: 'title', =>
+          @raw 'Lori 2 Lori * rocks'
+        @h2 class: 'slogan', 'Learning programming from scratch'
 
       @tag 'main', =>
         @div class: 'posts', =>
@@ -36,22 +34,30 @@ module.exports = new View (posts) ->
               @h5 class: 'title', post.title
               @p class: 'description', post.description
 
+        @div class: 'about', =>
+          @img src: "/images/dorota.jpeg", class: 'logo', alt:'My photo'
+          markdown """
+            On this website I'd like to share my experience with learning programming, especially web development and design.
+
+            As I've started to build this website I was a lawyer with several years of professional experience and dream to become a web developer. I've started to learn graphic design and programming and soon got a job including software engineering in a translation company.
+          """
+          @ul class: 'social', =>
+            @li =>
+              @a href:'https://github.com/Lori2Lori', =>
+                @span class:"fa fa-github fa-4x"
+            @li =>
+              @a href:'https://twitter.com/Lori2Lori', =>
+                @span class:"fa fa-twitter fa-4x"
+            @li =>
+              @a href:'http://stackoverflow.com/users/5236216/dorota-cieslinska', =>
+                @span class:"fa fa-stack-overflow fa-4x"
+
               # TODO: Think about adding dates to posts (maybe)
 
-      @div id: 'footer', =>
-        @ul =>
-          @li =>
-            @a href:'https://github.com/Lori2Lori', =>
-              @span class:"fa fa-github fa-4x"
-          @li =>
-            @a href:'https://twitter.com/Lori2Lori', =>
-              @span class:"fa fa-twitter fa-4x"
-          @li =>
-            @a href:'http://stackoverflow.com/users/5236216/dorota-cieslinska', =>
-              @span class:"fa fa-stack-overflow fa-4x"
+      @footer =>
 
-      @div id: 'copyright', =>
-        @text "© Dorota Cieślińska 2015"
+        @div id: 'copyright', =>
+          @text "© Dorota Cieślińska 2015"
 
       @script src:"/scripts/analytics.js"
       @script src: "/scripts/prism.js"

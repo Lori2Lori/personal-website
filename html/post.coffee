@@ -20,41 +20,41 @@ module.exports = new View (post) ->
       @link rel: "stylesheet", href: "/css/prism.css"
       @link rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
       @title "Learning programming from scratch"
-    @body =>
+    @body class: 'single-post', =>
       @header =>
         @a href: '/', =>
-          @img src: "/images/dorota.jpeg", id:'myphoto', alt:'My photo'
-        @h2 'Learning programming from scratch'
-        @div id: 'top-menu', =>
+          @img src: "/images/dorota.jpeg", class: 'logo', alt:'My photo'
+        @h1 class: 'title', post.title
+        @h2 class: 'slogan', =>
+          @a href:'/','Lori 2 Lori * rocks'
+
+      @tag 'main', =>
+
+        @article class: 'content', =>
+          if post.date? then @h6 id: 'date', =>
+            date = moment post.date
+            @span 'Published: '
+            @time datetime: date.format(), date.format('MMMM Do YYYY')
+
+          markdown post.__content
+
+        @div id: 'disqus_thread', =>
+          @script src: '/scripts/disqus.js', type: 'text/javascript' # ?
+
+      @footer =>
+        @ul class: 'social', =>
           @li =>
-            @a href:'/','HOME'
+            @a href:'https://github.com/Lori2Lori', =>
+              @span class:"fa fa-github fa-4x"
+          @li =>
+            @a href:'https://twitter.com/Lori2Lori', =>
+              @span class:"fa fa-twitter fa-4x"
+          @li =>
+            @a href:'http://stackoverflow.com/users/5236216/dorota-cieslinska', =>
+              @span class:"fa fa-stack-overflow fa-4x"
 
-      @article class: 'content', =>
-        @h1 post.title
-        if post.date? then @h6 id: 'date', =>
-          date = moment post.date
-          @span 'Published: '
-          @time datetime: date.format(), date.format('MMMM Do YYYY')
-
-        markdown post.__content
-
-    @div id: 'disqus_thread', =>
-      @script src: '/scripts/disqus.js', type: 'text/javascript' # ?
-
-    @div id: 'footer', =>
-      @ul =>
-        @li =>
-          @a href:'https://github.com/Lori2Lori', =>
-            @span class:"fa fa-github fa-4x"
-        @li =>
-          @a href:'https://twitter.com/Lori2Lori', =>
-            @span class:"fa fa-twitter fa-4x"
-        @li =>
-          @a href:'http://stackoverflow.com/users/5236216/dorota-cieslinska', =>
-            @span class:"fa fa-stack-overflow fa-4x"
-
-    @div id: 'copyright', =>
-      @text "© Dorota Cieślińska 2015"
+        @div id: 'copyright', =>
+          @text "© Dorota Cieślińska 2015"
 
 
       # jQuery (necessary for jQuery JavaScript plugins)
