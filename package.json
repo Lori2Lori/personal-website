@@ -27,6 +27,7 @@
     "gulp-cli": "git://github.com/gulpjs/gulp-cli.git#4.0",
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-stylus": "^2.0.6",
     "gulp-w3cjs": "^0.3.0",
     "gulp-webserver": "^0.9.0",

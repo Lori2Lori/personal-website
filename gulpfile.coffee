@@ -10,6 +10,7 @@ fs         = require 'fs'
 path       = require 'path'
 matter     = require 'yaml-front-matter'
 stylus     = require 'gulp-stylus'
+sourcemaps = require 'gulp-sourcemaps'
 
 options = # defaults 'teacup',
   sources     : 'html/**/*'
@@ -67,7 +68,9 @@ gulp.task 'css', ->
   #Create index.css file from index.styl
   gulp
     .src options.style
+    .pipe sourcemaps.init()
     .pipe stylus()
+    .pipe sourcemaps.write '.'
     .pipe gulp.dest 'build/css'
 
 gulp.task 'assets', ->
