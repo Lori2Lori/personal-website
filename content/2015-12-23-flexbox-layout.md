@@ -34,3 +34,7 @@ Because I wanted `main` area to have flexible width I assigned `flex-grow` to 1,
   container aside
     flex: 0 0 200px
 ```
+
+And the old layout looked like that:
+
+<img class="img-responsive" src="/images/layout-2015-11-thumbnails.png" alt="Previous layout with cards" >
