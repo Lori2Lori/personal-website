@@ -30,6 +30,8 @@ module.exports = new View (post) ->
 
       @tag 'main', =>
 
+        # TODO: show list of posts on the left side
+
         @article class: 'content', =>
           if post.date? then @h6 id: 'date', =>
             date = moment post.date
