@@ -1,6 +1,31 @@
-.main-picture
-  background-color: gray
-  margin: 0
-  display: flex
-  flex-flow: row wrap
-  width: 100%
+header
+  font-family: 'Permanent Marker', cursive
+  text-align: center
+  padding: 40px
+  background-image: url('/images/square_bg_@2X.png')
+  background-repeat: repeat
+  border-bottom: 2px solid rgba(51, 51, 51, 0.1)
+
+  @media (max-width: 700px)
+    padding: 10px
+
+  h1.title
+    font-family: inherit
+    margin-top: 0
+
+    @media (max-width: 400px)
+      font-size: 28px
+    @media (min-width: 700px)
+      font-size: 3em
+
+  @import 'logo'
+  img.logo
+    max-width: 270px
+
+  a
+    text-decoration: none
+    color: hsl(0, 88%, 34%)
+
+    &:hover
+      color: hsl(0, 88%, 80%)
+      transition: color 0.3s

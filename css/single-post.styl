@@ -1,0 +1,44 @@
+body.single-post
+  @import 'social'
+
+  main
+    max-width: 700px
+
+  header, footer
+    background-image: url('/images/square_bg_@2X.png')
+    background-repeat: repeat
+
+.content
+  display: block
+  box-sizing: border-box
+
+  line-height: 1.5em
+  text-align: justify
+  text-decoration: none
+  color: black
+  background: white
+
+  a
+    color: black
+    transition: color 0.3s
+
+    &:visited
+      color: hsl(240, 10%, 55%)
+
+    &:hover
+      color: hsl(13, 100%, 52%)
+
+.img-responsive
+
+  display: block;
+  max-width: 100%;
+  height: auto;
+
+#date
+  border-top: 1px solid rgba(51, 51, 51, 0.1)
+  border-bottom: 1px solid rgba(51, 51, 51, 0.1)
+  font-weight: 300
+
+:not(pre) > code
+  font-size: 1.2em
+  background: #f5f2f0
