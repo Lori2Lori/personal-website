@@ -1,4 +1,4 @@
-Personal website about my adventure with learning programming.
+Law practice website
 ==============================================
 
 How to start hacking on this project

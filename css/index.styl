@@ -1,43 +1,12 @@
 @import 'typography'
-@import 'footer'
 @import 'header'
-@import 'single-post'
-@import 'prism'
 
 body
   background: white
   margin: 0
 
-main
+container
   display: flex
-  flex-flow: row-reverse wrap
-  max-width: 900px
+  flex-flow: column wrap
+  width: 100%
   margin: auto
-  padding: 20px
-
-  > *
-    flex: 0 100%
-
-  .posts
-    @import 'posts'
-    .title
-      margin: 0
-    p:last-child
-      margin-bottom: 0
-
-    @media (min-width: 600px)
-      flex: 1 0 0px
-
-  .about
-    padding: 20px
-    text-align: justify
-    @import 'social'
-    .social
-      font-size: 50%
-
-    @media (min-width: 600px)
-      flex: 0 0 200px
-
-    @import 'logo'
-    img.logo
-      width: 200px
