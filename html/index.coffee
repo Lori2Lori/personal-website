@@ -19,6 +19,7 @@ module.exports = new View (posts) ->
       @link rel: "stylesheet", href: "/css/index.css"
       @link rel: "stylesheet", href: "/css/prism.css"
       @link rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+      @script src:"/scripts/hotjar.js"
       @title "Learning programming from scratch"
 
     @body =>
@@ -33,6 +34,7 @@ module.exports = new View (posts) ->
             @a href: post.href, =>
               @h5 class: 'title', post.title
               @p class: 'description', post.description
+              # TODO: Think about adding dates to posts (maybe)
 
         @div class: 'about', =>
           @img src: "/images/dorota.jpeg", class: 'logo', alt:'My photo'
@@ -56,8 +58,13 @@ module.exports = new View (posts) ->
             @li =>
               @a href:'http://stackoverflow.com/users/5236216/dorota-cieslinska', =>
                 @span class:"fa fa-stack-overflow fa-4x"
-
-              # TODO: Think about adding dates to posts (maybe)
+          @a
+            class: "twitter-timeline",
+            href: "https://twitter.com/Lori2Lori",
+            data: "widget-id" : "669170353898393600",
+            =>
+              @text "Tweets by @Lori2Lori"
+              @script src:"/scripts/twitter.js"
 
       @footer =>
 
