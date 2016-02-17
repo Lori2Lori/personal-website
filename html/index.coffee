@@ -20,13 +20,13 @@ module.exports = new View (posts) ->
       @link rel: "stylesheet", href: "/css/prism.css"
       @link rel: "stylesheet", href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
       @script src:"/scripts/hotjar.js"
-      @title "Learning programming from scratch"
+      @title "How to learn programming"
 
     @body =>
       @header =>
         @h1 class: 'title', =>
           @raw 'Lori 2 Lori * rocks'
-        @h2 class: 'slogan', 'Learning programming from scratch'
+        @h2 class: 'slogan', 'How to learn programming'
 
       @tag 'main', =>
         @div class: 'posts', =>
