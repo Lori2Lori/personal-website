@@ -32,14 +32,45 @@ Then pull latest changes from GitHub
 git pull
 ```
 
-I decided not to install iojs on server and use containers instead
+I decided not to install node on server and use containers instead
+
+For the first deployment on server,I have to `install` dependencies:
 
 ```bash
-docker run -itw "/personal-website" --rm -v ~/personal-website:/personal-website iojs npm run build
+docker run -itw "/personal-website" --rm -v ~/personal-website:/personal-website node npm install
+```
+
+For the next time its is sufficient just to use `build`:
+
+```bash
+docker run -itw "/personal-website" --rm -v ~/personal-website:/personal-website node npm run build
 ```
 
 The option `-w` means that default working directory for running programs within a container is /personal website, not the root directory
 
 `npm run build` is a command  that will be executed in the container. It starts a 'build' task defined in a gulpfile.
+
+On my server, there is also needed to set up `nginx.conf`
+
+and `docker-compose.yml`
+
+```bash
+proxy:
+  image   : nginx
+  net     : host
+  ports   :
+    - "80:80"
+  volumes :
+    # nginx config file - has to be in sync with this
+    - ./nginx.conf:/etc/nginx/nginx.conf
+    # Sites served from static assets (no web services)
+    - ../personal-website/build/:/usr/share/nginx/html/personal-website
+```
+
+To run Docker:
+
+```bash
+docker-compose start
+```
 
 Changes are now visible on the website!
